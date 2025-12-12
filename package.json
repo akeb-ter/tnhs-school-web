@@ -1,0 +1,29 @@
+{
+  "name": "tnhs-web",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Akeboshiii/tnhs-school-web.git"
+  },
+  "author": "akeb",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Akeboshiii/tnhs-school-web/issues"
+  },
+  "homepage": "https://github.com/Akeboshiii/tnhs-school-web#readme",
+  "dependencies": {
+    "dotenv": "^17.2.3",
+    "express": "^5.2.1",
+    "node": "^24.12.0"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1",
+    "nodemon": "^3.1.11",
+    "sass": "^1.96.0"
+  }
+}
