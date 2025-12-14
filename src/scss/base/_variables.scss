@@ -1,0 +1,91 @@
+// Core Brand
+$blue-dark:  #0b1c2d;   // headers, footer
+$blue-mid:   #123a5f;   // nav, sections
+$blue-light: #1f6fb2;   // links, accents
+
+$blue-bright: #00d0ff;   // links, accents
+
+$gold-main:  #f4c430;   // CTA, highlights
+$gold-soft:  #e6b800;   // hover states
+
+// Neutrals
+$white:    #ffffff;
+$gray-100: #f5f7fa;    // background
+$gray-300: #d1d5db;    // borders
+$gray-600: #6b7280;    // secondary text
+$gray-900: #111827;    // primary text
+
+// Semantic
+$success: #16a34a;
+$warning: #f59e0b;
+$error:   #dc2626;
+
+// Overlays
+$overlay-dark: rgba(11, 28, 45, 0.75);
+
+// Font Families
+$font-primary: 'Inter', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+$font-heading: 'Poppins', 'Inter', sans-serif;
+
+// Font Sizes
+$fs-h1: 3rem;        // hero
+$fs-h2: 2.25rem;     // section titles
+$fs-h3: 1.5rem;      // cards
+$fs-body: 1rem;      // base text
+$fs-small: 0.875rem; // captions
+
+// Font Weights
+$fw-thin:    100;
+$fw-light:   300;
+$fw-regular: 400;
+$fw-medium:  500;
+$fw-semibold:600;
+$fw-bold:    700;
+
+// Line Heights
+$lh-tight: 1.2;   // headings
+$lh-normal:1.6;   // body
+$lh-loose: 1.8;   // long text
+
+// Global Styles
+body {
+  font-family: $font-primary;
+  font-size: $fs-body;
+  font-weight: $fw-regular;
+  line-height: $lh-normal;
+  color: $gray-900;
+  background-color: $blue-dark;
+
+  // overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-heading;
+  font-weight: $fw-bold;
+  line-height: $lh-tight;
+  color: $white;
+}
+
+a {
+  color: $blue-light;
+  text-decoration: none;
+}
+
+small {
+  font-size: $fs-small;
+  color: $gray-600;
+}
+
+// Navigation Component Variables
+// Base colors
+$nav-text:        $white;
+$nav-text-hover:  $blue-bright;
+$nav-text-active: $gold-soft;
+
+// Spacing & shape
+$nav-padding-y:  0.5rem;
+$nav-padding-x:  1rem;
+$nav-radius:     0.375rem;
+
+// Motion
+$nav-transition: 0.25s ease;

@@ -10,7 +10,6 @@
     "build": "sass src/scss:public/css --style=compressed",
     "start": "node server.js"
   },
-
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Akeboshiii/tnhs-school-web.git"
@@ -22,6 +21,7 @@
   },
   "homepage": "https://github.com/Akeboshiii/tnhs-school-web#readme",
   "dependencies": {
+    "aos": "^2.3.4",
     "dotenv": "^17.2.3",
     "express": "^5.2.1",
     "node": "^24.12.0"
