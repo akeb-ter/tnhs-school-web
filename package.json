@@ -6,11 +6,11 @@
   "scripts": {
     "dev": "concurrently \"npm run dev:server\" \"npm run dev:sass\"",
     "dev:server": "nodemon server.js",
-    "dev:sass": "sass src/scss/ public/css/ --watch",
-
-    "build": "sass src/scss/ public/css/ --style=compressed",
+    "dev:sass": "sass src/scss:public/css --watch",
+    "build": "sass src/scss:public/css --style=compressed",
     "start": "node server.js"
   },
+
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Akeboshiii/tnhs-school-web.git"
