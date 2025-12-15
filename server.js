@@ -11,7 +11,11 @@ const __dirname = path.dirname(url.fileURLToPath(import.meta.url));
 app.use(express.static('public'));
 app.use(express.json());
 
-app.get(['/', '/home'], (req, res) => {
+app.get('/', (req, res) => {
+    res.redirect('/home');
+});
+
+app.get('/home', (req, res) => {
     res.status(200).sendFile(path.resolve(__dirname, 'src/pages/index.html'));
 });
 
