@@ -9,28 +9,74 @@
     <title>Tacurong National High School</title>
 </head>
 <body>
+    <div id="lazy_loading_overlay">
+        <p>Loading assets...</p>
+    </div>
     <nav class="header_navigation">
-        <div class="container header_navigation_container">
+        <div class="container header_navigation_container" data-aos="fade-down" data-aos-once="true">
             <a href="/home">Home</a>
-            <a href="/about">About</a>
-            <a href="/research-and-development">Research and Development</a>
-            <a href="/administration">Administration</a>
-            <a href="/good-governance">Good Governance</a>
-            <a href="/news-and-updates">News and Updates</a>
+            <div class="nav_item">
+                <a class="dropdown_item">About</a>
+                <div class="dropdown">
+                    <a href="/about-school">The School</a>
+                    <a href="/about-principal">Principal</a>
+                    <a href="/about-pta">PTA Officials</a>
+                    <a href="/about-registrar">Registrar</a>
+                    <a href="/about-vision-mission">Vision and Mission</a>
+                </div>
+            </div>
+            <div class="nav_item">
+                <a class="dropdown_item">Research</a>
+                <div class="dropdown">
+                    <a href="/research-congress">Research Congress</a>
+                    <a href="/research-publication">Research Publication</a>
+                </div>
+            </div>
+            <div class="nav_item">
+                <a class="dropdown_item">JHS</a>
+                <div class="dropdown">
+                    <a href="/STE-program">STEP</a>
+                    <a href="/SPA-program">SPA</a>
+                    <a href="/regular-curriculum">Regular Curriculum</a>
+                </div>
+            </div>
+            <div class="nav_item">
+                <a class="dropdown_item">SHS</a>
+                <div class="dropdown">
+                    <a href="/Academic-track">Academic Tracks</a>
+                    <a href="/TVL-track">TVL Tracks</a>
+                </div>
+            </div>
+            <div class="nav_item">
+                <a class="dropdown_item">Good Governance</a>
+                <div class="dropdown">
+                    <a href="/quality-assurance">Quality Assurance</a>
+                    <a href="/health-services">Health Services</a>
+                    <a href="/infrastructure">Infrastructure</a>
+                </div>
+            </div>
+            <div class="nav_item">
+                <a class="dropdown_item">News and Updates</a>
+                <div class="dropdown">
+                    <a href="/school-publication">School Publication</a>
+                    <a href="/system-updates">System Updates</a>
+                </div>  
+            </div>
+            <p id="nav_time">Loading...</p>
         </div>
     </nav>
     <header>
-        <div class="container header_container">
-            <div class="tnhs_logo">
+        <div class="container header_container" data-aos="fade-down" data-aos-once="true">
+            <div class="tnhs_logo" data-aos="fade-right" data-aos-once="true">
                 <img src="/assets/images/logo/tnhs_logo.png" alt="Tacurong National High School Logo" id="header_school_logo">
             </div>
-            <div class="header_text_container">
+            <div class="header_text_container" data-aos="fade-right" data-aos-once="true">
                 <h2 class="header_title">TACURONG NATIONAL HIGH SCHOOL</h2>
                 <hr>   
                 <small class="header_subtitle">Barangay New Isabela, Tacurong City, Sultan Kudarat, 9800</small>
             </div>
 
-            <div class="csdt_logo">
+            <div class="csdt_logo" data-aos="fade-left" data-aos-once="true">
                 <img src="/assets/images/logo/csdt_logo.png" alt="City School Division of Tacurong Logo" id="header_csdt_logo">
             </div>
         </div>
@@ -42,20 +88,107 @@
                 <p>WELCOME TO</p>
                 <h1 class="hero_title">TACURONG NATIONAL HIGH SCHOOL</h1>
                 <p>YOUR GATEWAY TO QUALITY EDUCATION AND EXCELLENCE.</p>
+
             </div>
         </div>
     </section>
-    <section class="news">
-        <div class="container" data-aos="fade-right">
-            <h1>NEWS AND UPDATES</h1>
+    <section class="impact">
+        <div class="container impact_container">
+            <div class="impact_text_container impact_text_container_1" data-aos="fade-right">
+                <h1>OUR IMPACT</h1>
+                <small><i>As of School Year 2024-2025</i></small>
+                <h1>6800+</h1>
+                <p>Total students across JHS and SHS</p>
+            </div>
+            <div class="impact_text_container_2 impact_text_container" data-aos="fade-left"> 
+                <h3 class="accent_blue">STUDENT DISTRIBUTION</h3>
+                <p>Junior High School</p>
+                <div class="inline-content student_count_bar">
+                    <div id="jhs_bar"></div>
+                    <p>4888</p>
+                </div>
+                <p>Senior High School</p>
+                <div class="inline-content student_count_bar">
+                    <div id="shs_bar"></div>
+                    <p>1945</p>
+                </div>
+                <br>
+                <h3 class="accent_green">ACADEMIC PROGRAMS</h3>
+                <div class="academic_programs_container">
+                    <div class="">
+                        <p><b>JHS Special Programs</b></p>
+                        <p>STEP • SPA</p>
+                    </div>
+                    <div class="">
+                        <p><b>SHS Tracks</b></p>
+                        <p>Academic • TVL</p>
+                    </div>
+                </div>
+                <br>
+                <h3 class="accent_purple">TEACHERS & STAFF</h3>
+                <div class="inline-content total-personnel-text-container">
+                    <h2>150+</h2>
+                    <p>Total <br> Personnel</p>
+                </div>
+                <p><b>110</b> Licensed Teachers</p>
+                <p><b>40</b> Non-Teaching Staff</p>
+            </div>
         </div>
     </section>
-    
+
+    <section class="about">
+        <div class="container about_container" data-aos="fade-up">
+            <h1>ABOUT US!</h1>
+            <hr>
+            <div class="about_content_container">
+                <div class="sp-embed-player" data-aos="fade-right" data-id="cTlooHnYvRI" data-aspect-ratio="1.777778" data-padding-top="56.250000%">
+                    <script src="https://go.screenpal.com/player/appearance/cTlooHnYvRI">
+                    </script>
+                    <iframe style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;"  scrolling="no" src="https://go.screenpal.com/player/cTlooHnYvRI?ff=1&title=0" allowfullscreen="true">
+                    </iframe>
+                </div>
+                <div class="about_card" data-aos="fade-left">
+                    <p>
+                        Tacurong National High School shapes future ready individuals through quality education, fostering academic excellence, character development, and community engagement in a supportive environment.
+                    </p>
+                    <button class="btn btn-outline">Learn More!</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <footer>
-        
+        <div class="container footer_container" data-aos="fade-right">
+            <div class="footer_section footer_section_1">
+                <img src="/assets/images/logo/tnhs_logo.png" alt="Tacurong National High School Logo" class="footer_school_logo">
+                <p>Tacurong National High School</p>
+                <small>Barangay New Isabela, Tacurong City, Sultan Kudarat, 9800</small>
+            </div>
+            <div class="footer_section footer_section_2">
+                <h3>Quick Links</h3>
+                <a href="/home">Home</a>
+                <a href="/about-school">About the School</a>
+                <a href="/research-congress">Research Congress</a>
+                <a href="/STE-program">STEP Program</a>
+                <a href="/Academic-track">Academic Tracks</a>
+                <a href="/quality-assurance">Quality Assurance</a>
+                <a href="/school-publication">School Publication</a>
+            </div>
+            <div class="footer_section footer_section_3">
+                <h3>Contact Us</h3>
+                <p>Email: admin@tnhs.e-sys.info
+                <p>Phone: 09676402466</p>
+        </p>
+    </div>
+</div>
+<div class="footer_bottom">
+    <small">&copy; 2025 Tacurong National High School. Designed and managed by <a href="https://github.com/akeb" target="_blank" rel="noopener noreferrer">akeb</a>.</small>
+</div>
     </footer>
 
 </body>
 <script src="/js/main.js" type="module"></script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/progressbar.js"></script>
+
 </html>

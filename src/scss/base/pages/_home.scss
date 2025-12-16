@@ -1,0 +1,190 @@
+@use '../variables' as *;
+@use '../components' as *;
+
+
+body {
+    overflow-y: hidden;
+    //header goes here
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    .hero {
+        position: relative;
+        height: 100vh;
+        overflow: hidden;
+        /* gradients stay static */
+        background:
+            linear-gradient(
+            to right,
+            rgba(11, 28, 45, 0.9) 0%,
+            rgba(11, 28, 45, 0.75) 35%,
+            rgba(11, 28, 45, 0.3) 60%,
+            rgba(11, 28, 45, 0) 100%
+            ),
+            linear-gradient(
+            to bottom,
+            rgba(11, 28, 45, 0.7) 0%,
+            rgba(11, 28, 45, 0.4) 35%,
+            rgba(11, 28, 45, 0.2) 60%,
+            rgba(11, 28, 45, 0) 100%
+            ),
+            linear-gradient(
+            to top,
+            rgba(11, 28, 45, 1) 0%,
+            rgba(11, 28, 45, 0.7) 20%,
+            rgba(11, 28, 45, 0.5) 50%,
+            rgba(11, 28, 45, 0) 100%
+            );
+        /* image layer */
+        &::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+
+            background-image: var(--hero-img);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+
+            opacity: var(--hero-opacity, 0);
+            transition: opacity 1.2s ease;
+
+            z-index: -1;
+        }
+        .container {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            align-items: flex-end;
+            justify-content: left;
+            padding-bottom: 10%;
+
+            .hero_text_container {
+                h1, p {
+                    margin: 0;
+                    background: linear-gradient(
+                    to right,
+                    $white 0%,
+                    $gold-main 60%
+                    );
+                    -webkit-background-clip: text;
+                    background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                }
+
+                .hero_title {
+                    font-size: 2.3rem;
+                    font-weight: $fw-bold;
+                }
+            }
+        }
+    }
+    .impact {
+        background-color: $blue-dark;
+        .impact_container {
+            padding-top: 10%;
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-around;
+            .impact_text_container {
+                // background-color: red;
+                width: fit-content; 
+                * {
+                    margin: 0px;
+                }
+                h1{
+                    font-size: $fs-big;
+                }
+                p {
+                    font-weight: $fw-regular;
+                }
+            }
+
+            .impact_text_container_1 {
+                small, p {
+                    position: relative;
+                    top: -7px;
+                }
+            }
+            .impact_text_container_2 {
+                h3, h4 {
+                    font-weight: $fw-regular;
+                    margin: 0;
+                }
+                h3 {
+                    font-size: $fs-body;
+                    font-weight: $fw-semibold;
+                    margin-bottom: 8px;
+                }
+                p {
+                    font-size: $fs-small;
+
+                }
+                .academic_programs_container {
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    gap: 1.5rem;
+                    width: 100%;
+                    > * {
+                        display: block;
+                        width: 100%;
+                    }
+                    @media (max-width: 600px) {
+                        grid-template-columns: 1fr;
+                    }
+                }
+                .total-personnel-text-container {
+                    p {
+                        margin-left: 10px;
+                        line-height: 1.4;
+                    }
+                }
+
+                .student_count_bar {
+                    p {
+                        margin-left: 10px;
+                    }
+                }
+            }
+        }
+    }
+
+    .about {
+        .about_container {
+            h1 {
+                text-align: center;
+            }
+            .about_content_container {
+                display: inline-flex;
+                // grid-template-columns: 2fr 1fr;
+                // gap: 1.5rem;
+                width: 100%;
+
+                .sp-embed-player {
+                    position:relative;
+                    aspect-ratio:1.777778;
+                    border-radius:20px;
+                    overflow:hidden;
+                    background-color: $white;
+                    width: 65%;
+                    // margin-block: 5px;
+                }
+                .about_card {
+                    // margin-block: 5px;
+                    background-color: $white;
+                    border-radius: 20px;
+                    width: 32%;
+                    margin-left: auto;
+                    height: fit-content;
+                    color: $gray-900;
+                    padding: 10px;
+                    .btn {
+                        position: relative;
+                        left: 50%;
+                        transform: translateX(-50%);
+                    }
+                }
+            }
+        }
+    }
+}   

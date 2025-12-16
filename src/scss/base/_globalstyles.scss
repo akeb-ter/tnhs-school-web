@@ -1,0 +1,15 @@
+//globals class
+.inline-content {
+  display: flex;
+  align-items: center;
+  // background-color: red; 
+}
+
+section {
+    height: 110vh;
+    width: 100%;       
+    display: flex;
+    justify-content: center;
+    padding-bottom: 10vh;
+    overflow: hidden;
+}

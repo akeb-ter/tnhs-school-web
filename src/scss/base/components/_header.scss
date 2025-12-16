@@ -1,0 +1,173 @@
+@use '../variables' as *;
+
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 30px;
+    background: rgba(11, 28, 45, 0.6); // semi-transparent
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    margin: 0;
+    padding: 0;
+    z-index: 1001;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: transform 0.3s ease;
+    border-bottom: 1px solid $white;
+
+    .header_navigation_container {
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        align-content: center;
+        a {
+            color: $nav-text;
+            padding: $nav-padding-y $nav-padding-x;
+            border-radius: $nav-radius;
+            text-decoration: none;
+            font-weight: $fw-light;
+                transition: color $nav-transition,
+                        background-color $nav-transition;
+            cursor: pointer;
+            margin-inline: 2px;
+            font-size: $fs-small;
+            &:hover {
+                color: $nav-text-hover;
+            }
+            &.active {
+                color: $nav-text-active;
+            }
+        }
+        
+        .nav_item {
+            width: fit-content;
+            position: relative;
+            display: flex;
+            justify-content: center;
+
+            .dropdown_item {
+                &::after {
+                    content: "▾";
+                    display: inline-block;
+                    margin-left: 6px;
+                    transition: transform 0.15s ease;
+                }
+            }
+
+            .dropdown {
+                position: absolute;
+                top: 100%;
+                min-width: max-content;
+                padding-inline: 15px;
+
+                background-color: $overlay-dark-opaque;
+                display: flex;
+                flex-direction: column;
+                text-wrap: no-wrap;
+
+                opacity: 0;
+                visibility: hidden;
+                pointer-events: none;
+
+                transition:
+                opacity 0.2s ease,
+                transform 0.2s ease,
+                visibility 0.2s;
+
+                border-radius: 5px;
+
+                a {
+                    padding: 0;
+                    font-size: $fs-very-small;
+                    margin-bottom: 3px;
+                    // text-align: center;
+                }
+            }
+
+            &:hover {
+                .dropdown {
+                    opacity: 1;
+                    visibility: visible;
+                    pointer-events: auto;
+                    transform: translateY(0);
+                }
+
+                .dropdown_item::after {
+                    transform: rotate(180deg);
+                }
+            }
+        }
+        #nav_time {
+            font-size: $fs-small;
+            margin-left: auto;
+        }
+    }
+}
+
+header {
+    margin: 0;
+    padding: 0;
+    min-height: 15vh;
+    background: rgba(11, 28, 45, 0.6); // semi-transparent
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;  
+    position: fixed;
+    top: 30px;
+    width: 100%;
+    z-index: 1000;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    .container {
+        display: flex;
+        align-items: center;
+        .tnhs_logo {
+            #header_school_logo {
+                height: 80px;
+                width: auto;
+            }
+        }
+        .csdt_logo {
+            margin-left: auto;
+            #header_csdt_logo {
+                height: 80px;
+                width: auto;
+            }
+        }
+        h2, small {
+            margin: 0;
+            color: $white;
+        }
+        small {
+            font-weight: 100;
+        }
+    }
+    .header_container { //spacing
+        display: flex;
+        align-items: center;
+    }
+    .header_text_container {
+        margin-left: 15px;
+        hr {
+            margin-bottom: 0px;
+        }
+    }
+}
+
+//fading animation
+.header-hide {
+    opacity: 0;
+    transform: translateY(-20px);
+    pointer-events: none;
+}   
+
+.nav-hide {
+  transform: translateY(-100%);
+}

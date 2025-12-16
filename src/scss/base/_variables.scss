@@ -1,4 +1,6 @@
 // Core Brand
+
+$blue-darker:#08121f;   // footer background
 $blue-dark:  #0b1c2d;   // headers, footer
 $blue-mid:   #123a5f;   // nav, sections
 $blue-light: #1f6fb2;   // links, accents
@@ -20,19 +22,39 @@ $success: #16a34a;
 $warning: #f59e0b;
 $error:   #dc2626;
 
+$accent-blue: #2CB1C9;
+$accent-green: #5CC9A7;
+$accent-purple: #B07ACB;
+
+//Colors Globals
+.accent_blue {
+    color: $accent-blue;
+}
+
+.accent_green {
+    color: $accent-green;
+}
+
+.accent_purple {
+    color: $accent-purple;
+}
+
 // Overlays
 $overlay-dark: rgba(11, 28, 45, 0.75);
+$overlay-dark-opaque: rgba(11, 28, 45, 1);
 
 // Font Families
 $font-primary: 'Inter', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
 $font-heading: 'Poppins', 'Inter', sans-serif;
 
 // Font Sizes
+$fs-big: 3.5rem;     //titles
 $fs-h1: 3rem;        // hero
 $fs-h2: 2.25rem;     // section titles
 $fs-h3: 1.5rem;      // cards
-$fs-body: 1rem;      // base text
-$fs-small: 0.875rem; // captions
+$fs-body: 0.875rem;      // base text
+$fs-small: 0.8rem; // captions
+$fs-very-small: 0.7rem; // captions
 
 // Font Weights
 $fw-thin:    100;
@@ -46,6 +68,7 @@ $fw-bold:    700;
 $lh-tight: 1.2;   // headings
 $lh-normal:1.6;   // body
 $lh-loose: 1.8;   // long text
+$lh-relaxed: 2.0; // spacious
 
 // Global Styles
 body {
@@ -53,7 +76,7 @@ body {
   font-size: $fs-body;
   font-weight: $fw-regular;
   line-height: $lh-normal;
-  color: $gray-900;
+  color: $white;
   background-color: $blue-dark;
 
   // overflow-x: hidden;

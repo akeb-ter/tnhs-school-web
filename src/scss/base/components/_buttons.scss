@@ -1,0 +1,118 @@
+@use '../variables' as *;
+
+/* =========================
+   Button Variables
+========================= */
+$btn-radius: 14px;
+$btn-padding-y: 14px;
+$btn-padding-x: 28px;
+
+$btn-font-size: $fs-small;
+$btn-font-weight: 600;
+
+$btn-transition: 0.25s ease;
+
+/* =========================
+   Base Button
+========================= */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  padding: $btn-padding-y $btn-padding-x;
+  border-radius: $btn-radius;
+
+  font-size: $btn-font-size;
+  font-weight: $btn-font-weight;
+  text-decoration: none;
+  cursor: pointer;
+
+  border: none;
+  outline: none;
+  white-space: nowrap;
+
+  transition:
+    background-color $btn-transition,
+    color $btn-transition,
+    transform 0.15s ease,
+    box-shadow $btn-transition;
+
+  &:hover {
+    transform: translateY(-1px);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+
+  &:focus-visible {
+    outline: 2px solid #5FD3E3;
+    outline-offset: 3px;
+  }
+}
+
+/* =========================
+   Primary Button
+========================= */
+.btn-primary {
+  background: linear-gradient(135deg, #2CB1C9, #5FD3E3);
+  color: #071A2B;
+  box-shadow: 0 10px 30px rgba(44, 177, 201, 0.35);
+
+  &:hover {
+    box-shadow: 0 14px 40px rgba(44, 177, 201, 0.5);
+  }
+}
+
+/* =========================
+   Outline Button
+========================= */
+.btn-outline {
+  background: transparent;
+  color: #2CB1C9;
+  border: 1.5px solid rgba(44, 177, 201, 0.6);
+
+  &:hover {
+    background: rgba(44, 177, 201, 0.08);
+  }
+}
+
+/* =========================
+   Dark Button
+========================= */
+.btn-dark {
+  background: #071A2B;
+  color: #FFFFFF;
+
+  &:hover {
+    background: #0B2236;
+  }
+}
+
+/* =========================
+   Text Button
+========================= */
+.btn-text {
+  background: none;
+  color: #9FB3C8;
+  padding: 0;
+
+  &:hover {
+    color: #FFFFFF;
+  }
+}
+
+/* =========================
+   Size Variants
+========================= */
+.btn-sm {
+  padding: 10px 20px;
+  font-size: 0.85rem;
+}
+
+.btn-lg {
+  padding: 18px 36px;
+  font-size: 1.05rem;
+}
