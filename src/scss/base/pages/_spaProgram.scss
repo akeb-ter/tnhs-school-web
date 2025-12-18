@@ -1,13 +1,13 @@
 @use '../variables' as *;
 
 body {
-    section.step-hero {
+    section.spa-hero {
         position: relative;
         align-items: center;
         text-align: center;
         overflow: hidden;
 
-        .step-cover {
+        .spa-cover {
             position: absolute;
             inset: 0;
             width: 100%;
@@ -16,7 +16,7 @@ body {
             z-index: 0;
         }
 
-        .step-overlay {
+        .spa-overlay {
             position: absolute;
             inset: 0;
             background: linear-gradient(
@@ -32,14 +32,9 @@ body {
             position: relative;
             z-index: 2;
 
-            .step-hero-content {
+            .spa-hero-content {
                 max-width: 900px;
                 margin: 0 auto;
-
-                .step-logo {
-                    width: 160px;
-                    margin-bottom: 1.5rem;
-                }
 
                 h1 {
                     font-size: $fs-h1;
@@ -56,88 +51,68 @@ body {
         }
     }
 
-    
-    section.step-details {
+    .program-logo {
+        width: 160px;
+        height: 160px;
+        border-radius: 50%;
+        overflow: hidden;
+        background-color: $white;
+        padding: 0.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    section.spa-details {
         background: linear-gradient(
             180deg,
             $blue-mid 0%,
             $blue-dark 100%
         );
-    
+
         align-items: center;
         padding-top: 8vh;
-    
+
         .container {
-            .step-grid {
+            .spa-grid {
                 display: grid;
                 grid-template-columns: repeat(3, 1fr);
                 gap: 2.5rem;
-    
-                .step-card {
+
+                .spa-card {
                     background: $overlay-dark;
                     border-radius: 1rem;
                     padding: 2.5rem;
-    
+
                     h3 {
                         font-size: $fs-h3;
                         margin-bottom: 1rem;
                         color: $gold-main;
                     }
-    
+
                     p {
                         font-size: $fs-body;
                         line-height: $lh-loose;
                         color: $gray-300;
                     }
-    
+
                     ul {
                         list-style: none;
                         padding-left: 0;
-    
+
                         li {
                             font-size: $fs-body;
                             color: $gray-300;
                             margin-bottom: 0.6rem;
                             padding-left: 1rem;
                             position: relative;
-    
+
                             &::before {
                                 content: "•";
                                 position: absolute;
                                 left: 0;
-                                color: $accent-blue;
+                                color: $accent-purple;
                             }
                         }
                     }
-                }
-            }
-        }
-    }
-    
-    @media (max-width: 900px) {
-        section.step-hero,
-        section.step-details {
-            height: auto;
-        }
-    
-        section.step-hero {
-            .container {
-                .step-hero-content {
-                    .step-logo {
-                        width: 120px;
-                    }
-    
-                    h1 {
-                        font-size: $fs-h2;
-                    }
-                }
-            }
-        }
-    
-        section.step-details {
-            .container {
-                .step-grid {
-                    grid-template-columns: 1fr;
                 }
             }
         }

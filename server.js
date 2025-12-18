@@ -31,6 +31,10 @@ app.get('/STE-program', (req, res) => {
     res.status(200).sendFile(path.resolve(__dirname, 'src/pages/STEprogram.html'));
 });
 
+app.get('/SPA-program', (req, res) => {
+    res.status(200).sendFile(path.resolve(__dirname, 'src/pages/spaProgram.html'));
+});
+
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
 });

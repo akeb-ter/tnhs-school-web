@@ -694,17 +694,22 @@ body section.vision-mission .container .vm-grid .mission {
 
 body section.step-hero {
   position: relative;
-  background-image: url("../assets/images/ste-cover.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
   align-items: center;
   text-align: center;
+  overflow: hidden;
+}
+body section.step-hero .step-cover {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
 }
 body section.step-hero .step-overlay {
   position: absolute;
   inset: 0;
-  background-color: rgba(11, 28, 45, 0.75);
+  background: linear-gradient(180deg, rgba(11, 28, 45, 0.55) 0%, rgba(11, 28, 45, 0.75) 55%, #123a5f 100%);
   z-index: 1;
 }
 body section.step-hero .container {
@@ -715,10 +720,6 @@ body section.step-hero .container .step-hero-content {
   max-width: 900px;
   margin: 0 auto;
 }
-body section.step-hero .container .step-hero-content img {
-  overflow: hidden;
-  border-radius: 50%;
-}
 body section.step-hero .container .step-hero-content .step-logo {
   width: 160px;
   margin-bottom: 1.5rem;
@@ -726,6 +727,7 @@ body section.step-hero .container .step-hero-content .step-logo {
 body section.step-hero .container .step-hero-content h1 {
   font-size: 3rem;
   margin-bottom: 1rem;
+  color: #ffffff;
 }
 body section.step-hero .container .step-hero-content p {
   font-size: 0.875rem;
@@ -773,6 +775,111 @@ body section.step-details .container .step-grid .step-card ul li::before {
   position: absolute;
   left: 0;
   color: #2CB1C9;
+}
+@media (max-width: 900px) {
+  body section.step-hero,
+  body section.step-details {
+    height: auto;
+  }
+  body section.step-hero .container .step-hero-content .step-logo {
+    width: 120px;
+  }
+  body section.step-hero .container .step-hero-content h1 {
+    font-size: 2.25rem;
+  }
+  body section.step-details .container .step-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+body section.spa-hero {
+  position: relative;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+}
+body section.spa-hero .spa-cover {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+body section.spa-hero .spa-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(11, 28, 45, 0.55) 0%, rgba(11, 28, 45, 0.75) 55%, #123a5f 100%);
+  z-index: 1;
+}
+body section.spa-hero .container {
+  position: relative;
+  z-index: 2;
+}
+body section.spa-hero .container .spa-hero-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+body section.spa-hero .container .spa-hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+body section.spa-hero .container .spa-hero-content p {
+  font-size: 0.875rem;
+  line-height: 1.8;
+  color: #d1d5db;
+}
+body .program-logo {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: #ffffff;
+  padding: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+body section.spa-details {
+  background: linear-gradient(180deg, #123a5f 0%, #0b1c2d 100%);
+  align-items: center;
+  padding-top: 8vh;
+}
+body section.spa-details .container .spa-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+}
+body section.spa-details .container .spa-grid .spa-card {
+  background: rgba(11, 28, 45, 0.75);
+  border-radius: 1rem;
+  padding: 2.5rem;
+}
+body section.spa-details .container .spa-grid .spa-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #f4c430;
+}
+body section.spa-details .container .spa-grid .spa-card p {
+  font-size: 0.875rem;
+  line-height: 1.8;
+  color: #d1d5db;
+}
+body section.spa-details .container .spa-grid .spa-card ul {
+  list-style: none;
+  padding-left: 0;
+}
+body section.spa-details .container .spa-grid .spa-card ul li {
+  font-size: 0.875rem;
+  color: #d1d5db;
+  margin-bottom: 0.6rem;
+  padding-left: 1rem;
+  position: relative;
+}
+body section.spa-details .container .spa-grid .spa-card ul li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #B07ACB;
 }
 
 /*# sourceMappingURL=main.css.map */
