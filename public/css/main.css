@@ -37,6 +37,113 @@ small {
   color: #6b7280;
 }
 
+/* =========================
+   Button Variables
+========================= */
+/* =========================
+   Base Button
+========================= */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 14px 28px;
+  border-radius: 14px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  white-space: nowrap;
+  transition: background-color 0.25s ease, color 0.25s ease, transform 0.15s ease, box-shadow 0.25s ease;
+}
+.btn:hover {
+  transform: translateY(-1px);
+}
+.btn:active {
+  transform: translateY(0);
+}
+.btn:focus-visible {
+  outline: 2px solid #5FD3E3;
+  outline-offset: 3px;
+}
+
+/* =========================
+   Primary Button
+========================= */
+.btn-primary {
+  background: linear-gradient(135deg, #2CB1C9, #5FD3E3);
+  color: #071A2B;
+  box-shadow: 0 10px 30px rgba(44, 177, 201, 0.35);
+}
+.btn-primary:hover {
+  box-shadow: 0 14px 40px rgba(44, 177, 201, 0.5);
+}
+
+/* =========================
+   Outline Button
+========================= */
+.btn-outline {
+  background: transparent;
+  color: #2CB1C9;
+  border: 1.5px solid rgba(44, 177, 201, 0.6);
+}
+.btn-outline:hover {
+  background: rgba(44, 177, 201, 0.08);
+}
+
+/* =========================
+   Dark Button
+========================= */
+.btn-dark {
+  background: #071A2B;
+  color: #FFFFFF;
+}
+.btn-dark:hover {
+  background: #0B2236;
+}
+
+/* =========================
+   Text Button
+========================= */
+.btn-text {
+  background: none;
+  color: #9FB3C8;
+  padding: 0;
+}
+.btn-text:hover {
+  color: #FFFFFF;
+}
+
+/* =========================
+   Size Variants
+========================= */
+.btn-sm {
+  padding: 10px 20px;
+  font-size: 0.85rem;
+}
+
+.btn-lg {
+  padding: 18px 36px;
+  font-size: 1.05rem;
+}
+
+.inline-content {
+  display: flex;
+  align-items: center;
+}
+
+section {
+  height: 110vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 10vh;
+  overflow: hidden;
+}
+
 nav {
   position: fixed;
   top: 0;
@@ -151,10 +258,16 @@ header .container .tnhs_logo #header_school_logo {
   height: 80px;
   width: auto;
 }
-header .container .csdt_logo {
+header .container .header_text_container {
+  margin-left: 15px;
+}
+header .container .header_text_container hr {
+  margin-bottom: 0px;
+}
+header .container a {
   margin-left: auto;
 }
-header .container .csdt_logo #header_csdt_logo {
+header .container a .csdt_logo #header_csdt_logo {
   height: 80px;
   width: auto;
 }
@@ -169,12 +282,6 @@ header .header_container {
   display: flex;
   align-items: center;
 }
-header .header_text_container {
-  margin-left: 15px;
-}
-header .header_text_container hr {
-  margin-bottom: 0px;
-}
 
 .header-hide {
   opacity: 0;
@@ -184,99 +291,6 @@ header .header_text_container hr {
 
 .nav-hide {
   transform: translateY(-100%);
-}
-
-/* =========================
-   Button Variables
-========================= */
-/* =========================
-   Base Button
-========================= */
-.btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  padding: 14px 28px;
-  border-radius: 14px;
-  font-size: 0.8rem;
-  font-weight: 600;
-  text-decoration: none;
-  cursor: pointer;
-  border: none;
-  outline: none;
-  white-space: nowrap;
-  transition: background-color 0.25s ease, color 0.25s ease, transform 0.15s ease, box-shadow 0.25s ease;
-}
-.btn:hover {
-  transform: translateY(-1px);
-}
-.btn:active {
-  transform: translateY(0);
-}
-.btn:focus-visible {
-  outline: 2px solid #5FD3E3;
-  outline-offset: 3px;
-}
-
-/* =========================
-   Primary Button
-========================= */
-.btn-primary {
-  background: linear-gradient(135deg, #2CB1C9, #5FD3E3);
-  color: #071A2B;
-  box-shadow: 0 10px 30px rgba(44, 177, 201, 0.35);
-}
-.btn-primary:hover {
-  box-shadow: 0 14px 40px rgba(44, 177, 201, 0.5);
-}
-
-/* =========================
-   Outline Button
-========================= */
-.btn-outline {
-  background: transparent;
-  color: #2CB1C9;
-  border: 1.5px solid rgba(44, 177, 201, 0.6);
-}
-.btn-outline:hover {
-  background: rgba(44, 177, 201, 0.08);
-}
-
-/* =========================
-   Dark Button
-========================= */
-.btn-dark {
-  background: #071A2B;
-  color: #FFFFFF;
-}
-.btn-dark:hover {
-  background: #0B2236;
-}
-
-/* =========================
-   Text Button
-========================= */
-.btn-text {
-  background: none;
-  color: #9FB3C8;
-  padding: 0;
-}
-.btn-text:hover {
-  color: #FFFFFF;
-}
-
-/* =========================
-   Size Variants
-========================= */
-.btn-sm {
-  padding: 10px 20px;
-  font-size: 0.85rem;
-}
-
-.btn-lg {
-  padding: 18px 36px;
-  font-size: 1.05rem;
 }
 
 #lazy_loading_overlay {
@@ -365,20 +379,6 @@ footer .footer_container .footer_section.footer_section_3 a {
   font-size: 0.9em;
   color: rgba(255, 255, 255, 0.7);
   margin-top: 20px;
-}
-
-.inline-content {
-  display: flex;
-  align-items: center;
-}
-
-section {
-  height: 110vh;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  padding-bottom: 10vh;
-  overflow: hidden;
 }
 
 .container {
@@ -514,10 +514,182 @@ body .about .about_container .about_content_container .about_card {
   color: #111827;
   padding: 10px;
 }
-body .about .about_container .about_content_container .about_card .btn {
+body .about .about_container .about_content_container .about_card a .btn {
   position: relative;
   left: 50%;
   transform: translateX(-50%);
+}
+
+body section.about-school {
+  background: linear-gradient(180deg, #123a5f 0%, #0b1c2d 100%);
+  align-items: center;
+  padding-top: 8vh;
+}
+body section.about-school .container {
+  padding-top: 10%;
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+body section.about-school .container .about-content {
+  background: rgba(11, 28, 45, 0.75);
+  border-radius: 1rem;
+  padding: 2rem;
+}
+body section.about-school .container .about-content .about-image {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+body section.about-school .container .about-content .about-text h2 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+body section.about-school .container .about-content .about-text p {
+  font-size: 0.875rem;
+  line-height: 1.8;
+  color: #d1d5db;
+  margin-bottom: 1rem;
+}
+body section.about-school .container .about-content .about-text p strong {
+  color: #ffffff;
+  font-weight: 600;
+}
+body section.about-school .container .about-map {
+  background-color: #ffffff;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+body section.about-school .container .about-map h3 {
+  background-color: #f4c430;
+  color: #0b1c2d;
+  padding: 1rem 1.25rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+body section.about-school .container .about-map iframe {
+  width: 100%;
+  height: 360px;
+  border: none;
+}
+body section.school-profile {
+  position: relative;
+  background-image: url("../assets/images/flag-ceremony.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  align-items: center;
+  padding-top: 8vh;
+}
+body section.school-profile .profile-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(11, 28, 45, 0.75);
+  z-index: 1;
+}
+body section.school-profile .container {
+  position: relative;
+  z-index: 2;
+}
+body section.school-profile .container .section-title {
+  font-size: 2.25rem;
+  margin-bottom: 2.5rem;
+}
+body section.school-profile .container .section-title::after {
+  content: "";
+  display: block;
+  width: 70px;
+  height: 4px;
+  margin-top: 0.6rem;
+  background-color: #f4c430;
+  border-radius: 2px;
+}
+body section.school-profile .container .profile-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.5rem;
+}
+body section.school-profile .container .profile-grid .profile-card {
+  background: rgba(8, 18, 31, 0.85);
+  border-radius: 1rem;
+  padding: 2rem;
+}
+body section.school-profile .container .profile-grid .profile-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #f4c430;
+}
+body section.school-profile .container .profile-grid .profile-card .sub-title {
+  margin-top: 2rem;
+}
+body section.school-profile .container .profile-grid .profile-card p {
+  font-size: 0.875rem;
+  line-height: 1.8;
+  color: #d1d5db;
+}
+body section.school-profile .container .profile-grid .profile-card ul {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 1rem;
+}
+body section.school-profile .container .profile-grid .profile-card ul li {
+  font-size: 0.875rem;
+  color: #d1d5db;
+  margin-bottom: 0.6rem;
+}
+body section.school-profile .container .profile-grid .profile-card ul li strong {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+body section.vision-mission {
+  background: linear-gradient(180deg, #0b1c2d 0%, #08121f 100%);
+  align-items: center;
+  padding-top: 8vh;
+}
+body section.vision-mission .container .section-title {
+  font-size: 2.25rem;
+  margin-bottom: 3rem;
+}
+body section.vision-mission .container .section-title::after {
+  content: "";
+  display: block;
+  width: 70px;
+  height: 4px;
+  margin-top: 0.6rem;
+  background-color: #f4c430;
+  border-radius: 2px;
+}
+body section.vision-mission .container .vm-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.5rem;
+}
+body section.vision-mission .container .vm-grid .vm-card {
+  background: rgba(11, 28, 45, 0.75);
+  border-radius: 1rem;
+  padding: 2.5rem;
+}
+body section.vision-mission .container .vm-grid .vm-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #f4c430;
+}
+body section.vision-mission .container .vm-grid .vm-card p {
+  font-size: 0.875rem;
+  line-height: 1.8;
+  color: #d1d5db;
+}
+body section.vision-mission .container .vm-grid .vision {
+  border-left: 4px solid #2CB1C9;
+}
+body section.vision-mission .container .vm-grid .mission {
+  border-left: 4px solid #5CC9A7;
 }
 
 /*# sourceMappingURL=main.css.map */

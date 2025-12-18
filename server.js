@@ -19,6 +19,14 @@ app.get('/home', (req, res) => {
     res.status(200).sendFile(path.resolve(__dirname, 'src/pages/index.html'));
 });
 
+app.get('/about-school', (req, res) => {
+    res.status(200).sendFile(path.resolve(__dirname, 'src/pages/aboutSchool.html'));
+});
+
+app.get('/about-vision-mission', (req, res) => {
+    res.status(200).sendFile(path.resolve(__dirname, 'src/pages/visionAndMission.html'));
+});
+
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
 });

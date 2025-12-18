@@ -1,11 +1,13 @@
 @use 'variables' as *;
 
-//load cxomponents here
-@use './components/header' as *;
+//load components here (style)
 @use './components/buttons' as *;
+@use './globalstyles' as *;
+
+//load global components here
+@use './components/header' as *;
 @use './components/loading' as *;
 @use './components/footer' as *;
-@use './globalstyles' as *;
 
 .container {
     width: 80%;

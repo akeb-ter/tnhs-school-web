@@ -178,10 +178,12 @@ body {
                     height: fit-content;
                     color: $gray-900;
                     padding: 10px;
-                    .btn {
-                        position: relative;
-                        left: 50%;
-                        transform: translateX(-50%);
+                    a {
+                        .btn {
+                            position: relative;
+                            left: 50%;
+                            transform: translateX(-50%);
+                        }
                     }
                 }
             }

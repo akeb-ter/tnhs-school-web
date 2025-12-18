@@ -134,11 +134,19 @@ header {
                 width: auto;
             }
         }
-        .csdt_logo {
+        .header_text_container {
+            margin-left: 15px;
+            hr {
+                margin-bottom: 0px;
+            }
+        }
+        a {
             margin-left: auto;
-            #header_csdt_logo {
-                height: 80px;
-                width: auto;
+            .csdt_logo {
+                #header_csdt_logo {
+                    height: 80px;
+                    width: auto;
+                }
             }
         }
         h2, small {
@@ -152,12 +160,6 @@ header {
     .header_container { //spacing
         display: flex;
         align-items: center;
-    }
-    .header_text_container {
-        margin-left: 15px;
-        hr {
-            margin-bottom: 0px;
-        }
     }
 }
 
