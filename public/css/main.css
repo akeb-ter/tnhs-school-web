@@ -720,6 +720,10 @@ body section.step-hero .container .step-hero-content {
   max-width: 900px;
   margin: 0 auto;
 }
+body section.step-hero .container .step-hero-content img {
+  overflow: hidden;
+  border-radius: 50%;
+}
 body section.step-hero .container .step-hero-content .step-logo {
   width: 160px;
   margin-bottom: 1.5rem;
@@ -880,6 +884,68 @@ body section.spa-details .container .spa-grid .spa-card ul li::before {
   position: absolute;
   left: 0;
   color: #B07ACB;
+}
+
+body section.regular-hero {
+  background: linear-gradient(180deg, #123a5f 0%, #0b1c2d 100%);
+  align-items: center;
+  text-align: center;
+}
+body section.regular-hero .container .regular-hero-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+body section.regular-hero .container .regular-hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+body section.regular-hero .container .regular-hero-content p {
+  font-size: 0.875rem;
+  line-height: 1.8;
+  color: #d1d5db;
+}
+body section.regular-details {
+  background: linear-gradient(180deg, #0b1c2d 0%, #08121f 100%);
+  align-items: center;
+  padding-top: 8vh;
+}
+body section.regular-details .container .regular-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+}
+body section.regular-details .container .regular-grid .regular-card {
+  background: rgba(11, 28, 45, 0.75);
+  border-radius: 1rem;
+  padding: 2.5rem;
+}
+body section.regular-details .container .regular-grid .regular-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #f4c430;
+}
+body section.regular-details .container .regular-grid .regular-card p {
+  font-size: 0.875rem;
+  line-height: 1.8;
+  color: #d1d5db;
+}
+body section.regular-details .container .regular-grid .regular-card ul {
+  list-style: none;
+  padding-left: 0;
+}
+body section.regular-details .container .regular-grid .regular-card ul li {
+  font-size: 0.875rem;
+  color: #d1d5db;
+  margin-bottom: 0.6rem;
+  padding-left: 1rem;
+  position: relative;
+}
+body section.regular-details .container .regular-grid .regular-card ul li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #5CC9A7;
 }
 
 /*# sourceMappingURL=main.css.map */

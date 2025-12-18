@@ -35,6 +35,10 @@ app.get('/SPA-program', (req, res) => {
     res.status(200).sendFile(path.resolve(__dirname, 'src/pages/spaProgram.html'));
 });
 
+app.get('/regular-curriculum', (req, res) => {
+    res.status(200).sendFile(path.resolve(__dirname, 'src/pages/regularCurriculum.html'));
+});
+
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
 });
