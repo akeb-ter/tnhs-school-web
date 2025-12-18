@@ -27,6 +27,10 @@ app.get('/about-vision-mission', (req, res) => {
     res.status(200).sendFile(path.resolve(__dirname, 'src/pages/visionAndMission.html'));
 });
 
+app.get('/STE-program', (req, res) => {
+    res.status(200).sendFile(path.resolve(__dirname, 'src/pages/STEprogram.html'));
+});
+
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
 });

@@ -692,4 +692,87 @@ body section.vision-mission .container .vm-grid .mission {
   border-left: 4px solid #5CC9A7;
 }
 
+body section.step-hero {
+  position: relative;
+  background-image: url("../assets/images/ste-cover.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  align-items: center;
+  text-align: center;
+}
+body section.step-hero .step-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(11, 28, 45, 0.75);
+  z-index: 1;
+}
+body section.step-hero .container {
+  position: relative;
+  z-index: 2;
+}
+body section.step-hero .container .step-hero-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+body section.step-hero .container .step-hero-content img {
+  overflow: hidden;
+  border-radius: 50%;
+}
+body section.step-hero .container .step-hero-content .step-logo {
+  width: 160px;
+  margin-bottom: 1.5rem;
+}
+body section.step-hero .container .step-hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+body section.step-hero .container .step-hero-content p {
+  font-size: 0.875rem;
+  line-height: 1.8;
+  color: #d1d5db;
+}
+body section.step-details {
+  background: linear-gradient(180deg, #123a5f 0%, #0b1c2d 100%);
+  align-items: center;
+  padding-top: 8vh;
+}
+body section.step-details .container .step-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+}
+body section.step-details .container .step-grid .step-card {
+  background: rgba(11, 28, 45, 0.75);
+  border-radius: 1rem;
+  padding: 2.5rem;
+}
+body section.step-details .container .step-grid .step-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #f4c430;
+}
+body section.step-details .container .step-grid .step-card p {
+  font-size: 0.875rem;
+  line-height: 1.8;
+  color: #d1d5db;
+}
+body section.step-details .container .step-grid .step-card ul {
+  list-style: none;
+  padding-left: 0;
+}
+body section.step-details .container .step-grid .step-card ul li {
+  font-size: 0.875rem;
+  color: #d1d5db;
+  margin-bottom: 0.6rem;
+  padding-left: 1rem;
+  position: relative;
+}
+body section.step-details .container .step-grid .step-card ul li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #2CB1C9;
+}
+
 /*# sourceMappingURL=main.css.map */

@@ -1,0 +1,11 @@
+[
+{"hash":"da390d6f7e1dc85cc78c73faf458a3e1eae4925e","author":"Akeb","email":"johnkuraya491@gmail.com","date":"2025-12-19 00:56:12 +0800","message":"Add About School and Vision & Mission pages with corresponding styles and scripts"},
+{"hash":"8260c155d414807d235877c5255ea34f12fe435c","author":"Akeb","email":"johnkuraya491@gmail.com","date":"2025-12-17 02:03:29 +0800","message":"Refactor website structure and enhance functionality"},
+{"hash":"fcee173acf5df756a5c3fc63c4a586c068c0767b","author":"Akeb","email":"johnkuraya491@gmail.com","date":"2025-12-15 14:46:00 +0800","message":"refactor: Separate route handling for home and root endpoints"},
+{"hash":"36212f88b3830575bee1759c8916978bf356d93e","author":"Akeb","email":"johnkuraya491@gmail.com","date":"2025-12-14 22:39:56 +0800","message":"feat: Implement header and navigation scroll behavior with fading effects"},
+{"hash":"980eb26ffd53480020358602c7aa9e68602e5a24","author":"Akeb","email":"johnkuraya491@gmail.com","date":"2025-12-14 13:57:22 +0800","message":"Add main.scss and main.css files with initial body styling"},
+{"hash":"fd6ba0e1f7b372252bed245f82747c187fb2b5d8","author":"Akeb","email":"johnkuraya491@gmail.com","date":"2025-12-14 13:57:06 +0800","message":"Fix script paths in package.json for sass compilation"},
+{"hash":"4ae203ab99c403bf8cdfe82fe32075a00b6126f7","author":"Akeb","email":"johnkuraya491@gmail.com","date":"2025-12-14 13:50:21 +0800","message":"Add development scripts to package.json and create index.html file"},
+{"hash":"86f55473b76ab0ec8acbc6784c38ff453fafac13","author":"Akeb","email":"johnkuraya491@gmail.com","date":"2025-12-14 13:47:58 +0800","message":"Add index.html file to project structure"},
+{"hash":"3b8433534cfeb30c17b27ef3c6b0b4c97864a3ca","author":"Akeb","email":"johnkuraya491@gmail.com","date":"2025-12-12 15:16:28 +0800","message":"Initialize project with package.json and server.js files"}
+]
