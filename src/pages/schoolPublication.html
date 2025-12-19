@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="/css/main.css">
     <link rel="shortcut icon" href="/assets/favicon/favicon.ico" type="image/x-icon">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <title>TNHS SPA Program</title>
+    <title>Stargazer Publication</title>
 </head>
 <body>
     <div id="lazy_loading_overlay">
@@ -82,72 +82,66 @@
             </a>
         </div>
     </header>
-
-    <section class="spa-hero">
-        <div class="spa-overlay"></div>
+  
+    <section class="publication-hero">
+        <div class="publication-overlay"></div>
 
         <img
-            src="/assets/images/cover/strand_or_program/spa_cover.jpg"
-            alt="SPA Program Cover"
-            class="spa-cover"
+            src="/assets/images/cover/strand_or_program/pub_cover.jpg"
+            alt="School Publication Cover"
+            class="publication-cover"
         >
 
         <div class="container">
-            <div class="spa-hero-content">
+            <div class="publication-hero-content">
                 <img
-                    src="/assets/images/logo/spa_logo.jpg"
-                    alt="SPA Logo"
+                    src="/assets/images/logo/pub_logo.jpg"
+                    alt="School Publication Logo"
                     class="program-logo"
                 >
 
-                <h1>Special Program in the Arts</h1>
+                <h1>The Stargazer Publication</h1>
                 <p>
-                    A Junior High School program that nurtures creativity,
-                    artistic excellence, and cultural awareness through
-                    focused training in the arts.
+                    The Tacurong National High School School Publication serves
+                    as the official student-led media arm of the school. It
+                    delivers timely news, feature stories, and campus updates
+                    that reflect student voices and school life.
                 </p>
+
+                <a
+                    href="https://web.facebook.com/profile.php?id=100088266395746"
+                    target="_blank"
+                    class="pub-fb-link"
+                >
+                    Visit our Facebook Page
+                </a>
             </div>
         </div>
     </section>
 
-    <section class="spa-details">
+
+    <section class="publication-news">
         <div class="container">
-            <div class="spa-grid">
-                <div class="spa-card">
-                    <h3>Program Overview</h3>
-                    <p>
-                        The Special Program in the Arts (SPA) is designed for
-                        learners with exceptional talent and interest in the
-                        arts. The program provides structured and enriched
-                        instruction to develop artistic skills and creative
-                        expression.
-                    </p>
-                </div>
-
-                <div class="spa-card">
-                    <h3>Program Objectives</h3>
-                    <ul>
-                        <li>Develop artistic skills and creative discipline</li>
-                        <li>Promote cultural awareness and appreciation</li>
-                        <li>Enhance self-expression and confidence</li>
-                        <li>Prepare learners for arts-related academic paths</li>
-                    </ul>
-                </div>
-
-                <div class="spa-card">
-                    <h3>Learning Focus</h3>
-                    <p>
-                        SPA learners engage in performance-based activities,
-                        workshops, and exhibitions that strengthen their
-                        foundation in visual arts, music, dance, theater,
-                        and other artistic disciplines.
-                    </p>
-                </div>
-            </div>
+            <h2 class="section-title">Latest News</h2>
+            <div id="news-grid" class="news-grid"></div>
         </div>
     </section>
 
+    <div id="news-modal" class="news-modal">
+        <div class="news-modal-overlay"></div>
 
+        <div class="news-modal-content">
+            <button class="news-modal-close">&times;</button>
+
+            <div class="news-modal-media"></div>
+
+            <div class="news-modal-text">
+                <span class="news-modal-date"></span>
+                <h2 class="news-modal-title"></h2>
+                <p class="news-modal-desc"></p>
+            </div>
+        </div>
+    </div>
     <footer>
         <div class="container footer_container" data-aos="fade-right">
             <div class="footer_section footer_section_1">
@@ -177,6 +171,7 @@
         </div>
     </footer>
 </body>
+<script src="/js/publication-news.js"></script>
 <script src="/js/mainGlobal.js" type="module"></script>
 <script src="/js/aboutSchool.js" type="module"></script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>

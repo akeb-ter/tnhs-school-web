@@ -51,6 +51,10 @@ app.get('/TVL-track', (req, res) => {
     res.status(200).sendFile(path.resolve(__dirname, 'src/pages/tvlTrack.html'));
 });
 
+app.get('/school-publication', (req, res) => {
+    res.status(200).sendFile(path.resolve(__dirname, 'src/pages/schoolPublication.html'));
+});
+
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
 });

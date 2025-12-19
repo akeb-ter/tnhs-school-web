@@ -1,4 +1,10 @@
 [
+{"hash":"5c1dfb6c104f9f1a706a3816a9b1405df679725a","author":"Akeb","email":"johnkuraya491@gmail.com","date":"2025-12-19 23:40:21 +0800","message":"Add Academic and TVL Track pages with corresponding styles"},
+{"hash":"d30ede630bd50d99ce521a4e4acdba917349486e","author":"Akeb","email":"johnkuraya491@gmail.com","date":"2025-12-19 23:10:43 +0800","message":"Add academic strand page and styles"},
+{"hash":"468a0b66b8c00ea750ccd524744e31a5ae5f3e94","author":"Akeb","email":"johnkuraya491@gmail.com","date":"2025-12-19 22:58:23 +0800","message":"feat: Add System Updates page with corresponding styles and scripts"},
+{"hash":"110f677e981fa9acbe92f1e4c8d326ed0f14d159","author":"Akeb","email":"johnkuraya491@gmail.com","date":"2025-12-19 01:59:12 +0800","message":"Add Regular Curriculum page and associated styles; update SPA Program title"},
+{"hash":"0cc817fb136f979deb31c0ab8eadc5127330877c","author":"Akeb","email":"johnkuraya491@gmail.com","date":"2025-12-19 01:45:59 +0800","message":"Add SPA Program page with HTML structure and SCSS styling"},
+{"hash":"66e87e6fd56ccb50aa84b7047c27a2ef93b6ce70","author":"Akeb","email":"johnkuraya491@gmail.com","date":"2025-12-19 01:23:22 +0800","message":"Add STE Program page and associated styles"},
 {"hash":"da390d6f7e1dc85cc78c73faf458a3e1eae4925e","author":"Akeb","email":"johnkuraya491@gmail.com","date":"2025-12-19 00:56:12 +0800","message":"Add About School and Vision & Mission pages with corresponding styles and scripts"},
 {"hash":"8260c155d414807d235877c5255ea34f12fe435c","author":"Akeb","email":"johnkuraya491@gmail.com","date":"2025-12-17 02:03:29 +0800","message":"Refactor website structure and enhance functionality"},
 {"hash":"fcee173acf5df756a5c3fc63c4a586c068c0767b","author":"Akeb","email":"johnkuraya491@gmail.com","date":"2025-12-15 14:46:00 +0800","message":"refactor: Separate route handling for home and root endpoints"},

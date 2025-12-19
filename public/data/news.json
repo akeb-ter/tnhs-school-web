@@ -1,0 +1,30 @@
+[
+  {
+    "title": "Excellence in Journalism Shines Again",
+    "desc": "Congratulations to Sir Daryl Casamorin for winning Champion in Column Writing and Sir Richie Umadhay for bagging Champion in Copy Reading and Headline Writing at the Regional Training Workshop on Campus Journalism and Media Literacy held in Koronadal City. Their dedication and talent continue to make The Stargazer Publication proud.",
+    "pics": [
+      "assets/images/news/excellence-journalism.jpg"
+    ],
+    "date": "November 4, 2025"
+  },
+  {
+    "title": "TV Broadcasting Team Bags 4th Runner-Up Overall Best TV Newscast",
+    "desc": "Congratulations to the TV Broadcasting – Filipino Team for earning 4th Runner-Up Overall Best TV Newscast at the 3rd Cooperative Month Celebration in Koronadal City on October 13, 2025. This achievement reflects their hard work, creativity, and teamwork, made possible through the support of coaches, school administrators, and the TNHS community.",
+    "pics": [
+      "assets/images/news/tv-broadcasting-award.jpg"
+    ],
+    "date": "October 22, 2025"
+  },
+  {
+    "title": "Stargazers Excel at SOX Young Minds Convergence",
+    "desc": "Stargazers proudly represented SDO Tacurong at the SOX Young Minds Convergence held on October 9, 2025, in Koronadal City. Achievements include Champion in Environmental Essay Writing, Champion in Poster Making Competition, and 4th Runner-Up in Environmental Quiz Bee. Special thanks to SDO Tacurong, school administrators, and partners for their continued support.",
+    "pics": [
+      "assets/images/news/sox-1.jpg",
+      "assets/images/news/sox-2.jpg",
+      "assets/images/news/sox-3.jpg",
+      "assets/images/news/sox-4.jpg",
+      "assets/images/news/sox-5.jpg"
+    ],
+    "date": "October 11, 2025"
+  }
+]
