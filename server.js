@@ -39,6 +39,10 @@ app.get('/regular-curriculum', (req, res) => {
     res.status(200).sendFile(path.resolve(__dirname, 'src/pages/regularCurriculum.html'));
 });
 
+app.get('/system-updates', (req, res) => {
+    res.status(200).sendFile(path.resolve(__dirname, 'src/pages/systemUpdates.html'));
+});
+
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
 });

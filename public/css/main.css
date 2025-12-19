@@ -948,4 +948,80 @@ body section.regular-details .container .regular-grid .regular-card ul li::befor
   color: #5CC9A7;
 }
 
+body section.system-updates-hero {
+  background: linear-gradient(180deg, #123a5f 0%, #0b1c2d 100%);
+  align-items: center;
+  text-align: center;
+}
+body section.system-updates-hero .container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+body section.system-updates-hero .container h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+body section.system-updates-hero .container p {
+  font-size: 0.875rem;
+  line-height: 1.8;
+  color: #d1d5db;
+}
+body section.system-updates {
+  height: fit-content;
+  background: linear-gradient(180deg, #0b1c2d 0%, #08121f 100%);
+  align-items: center;
+  padding-top: 8vh;
+}
+body section.system-updates .container .updates-list {
+  display: grid;
+  gap: 2rem;
+}
+body section.system-updates .container .updates-list .update-item {
+  background: rgba(11, 28, 45, 0.75);
+  border-radius: 1rem;
+  padding: 2rem;
+}
+body section.system-updates .container .updates-list .update-item h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.6rem;
+  color: #ffffff;
+}
+body section.system-updates .container .updates-list .update-item p {
+  font-size: 0.875rem;
+  line-height: 1.8;
+  color: #d1d5db;
+  margin-bottom: 0.8rem;
+}
+body section.system-updates .container .updates-list .update-item small {
+  font-size: 0.8rem;
+  color: #6b7280;
+}
+body section.system-updates .container .updates-list .update-item .update-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.8rem;
+}
+body section.system-updates .container .updates-list .update-item .update-header .update-tag {
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.25rem 0.6rem;
+  border-radius: 0.375rem;
+  color: #ffffff;
+}
+body section.system-updates .container .updates-list .update-item .update-header .update-date {
+  font-size: 0.8rem;
+  color: #6b7280;
+}
+body section.system-updates .container .updates-list .added .update-tag {
+  background-color: #5CC9A7;
+}
+body section.system-updates .container .updates-list .improved .update-tag {
+  background-color: #2CB1C9;
+}
+body section.system-updates .container .updates-list .implemented .update-tag {
+  background-color: #B07ACB;
+}
+
 /*# sourceMappingURL=main.css.map */
