@@ -3,7 +3,7 @@ import fs from 'fs/promises';
 import path from 'path';
 import url from 'url';
 
-export const app = express();
+const app = express();
 const __dirname = path.dirname(url.fileURLToPath(import.meta.url));
 
 app.use(express.static(path.join(__dirname, 'public')));
@@ -52,3 +52,5 @@ app.get('/TVL-track', (req, res) => {
 app.get('/school-publication', (req, res) => {
     res.status(200).sendFile(path.resolve(__dirname, 'src/pages/schoolPublication.html'));
 });
+
+export default app;
