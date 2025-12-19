@@ -43,6 +43,10 @@ app.get('/system-updates', (req, res) => {
     res.status(200).sendFile(path.resolve(__dirname, 'src/pages/systemUpdates.html'));
 });
 
+app.get('/Academic-track', (req, res) => {
+    res.status(200).sendFile(path.resolve(__dirname, 'src/pages/academicStrand.html'));
+});
+
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
 });
