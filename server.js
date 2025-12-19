@@ -44,7 +44,11 @@ app.get('/system-updates', (req, res) => {
 });
 
 app.get('/Academic-track', (req, res) => {
-    res.status(200).sendFile(path.resolve(__dirname, 'src/pages/academicStrand.html'));
+    res.status(200).sendFile(path.resolve(__dirname, 'src/pages/academicTrack.html'));
+});
+
+app.get('/TVL-track', (req, res) => {
+    res.status(200).sendFile(path.resolve(__dirname, 'src/pages/tvlTrack.html'));
 });
 
 app.listen(PORT, () => {

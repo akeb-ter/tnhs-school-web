@@ -18,4 +18,6 @@
 //system updates page
 @use 'base/pages/systemUpdates' as *;
 //academic strand page
-@use 'base/pages/academicStrand' as *;
+@use 'base/pages/academicTrack' as *;
+//TVL track page
+@use 'base/pages/tvlTrack' as *;
