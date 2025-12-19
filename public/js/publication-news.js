@@ -4,6 +4,7 @@ fetch("/data/news.json")
 
 function renderNews(news) {
     const grid = document.getElementById("news-grid");
+    grid.setAttribute("data-aos", "fade-right");
 
     news.forEach((item, index) => {
         const card = document.createElement("div");
@@ -73,6 +74,7 @@ function openModal(item) {
     title.textContent = item.title;
     desc.textContent = item.desc;
     date.textContent = item.date;
+    document.body.style.overflow = "hidden";
 
     modal.classList.add("active");
 
@@ -97,4 +99,5 @@ modal.querySelector(".news-modal-overlay").onclick = closeModal;
 
 function closeModal() {
     modal.classList.remove("active");
+    document.body.style.overflow = "auto";
 }

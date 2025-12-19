@@ -506,12 +506,12 @@ body .about .about_container .about_content_container .sp-embed-player {
   width: 65%;
 }
 body .about .about_container .about_content_container .about_card {
-  background-color: #ffffff;
+  background-color: #08121f;
   border-radius: 20px;
   width: 32%;
   margin-left: auto;
   height: fit-content;
-  color: #111827;
+  color: #ffffff;
   padding: 10px;
 }
 body .about .about_container .about_content_container .about_card a .btn {
