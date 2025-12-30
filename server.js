@@ -53,4 +53,8 @@ app.get('/school-publication', (req, res) => {
     res.status(200).sendFile(path.resolve(__dirname, 'src/pages/schoolPublication.html'));
 });
 
-export default app;
+app.listen(3000, () => {
+    console.log('Server is running on port 3000');
+});
+
+// export default app;

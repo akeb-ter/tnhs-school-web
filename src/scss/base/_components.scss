@@ -8,6 +8,7 @@
 @use './components/header' as *;
 @use './components/loading' as *;
 @use './components/footer' as *;
+@use './components/scrollbar' as *;
 
 .container {
     width: 80%;
