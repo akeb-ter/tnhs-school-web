@@ -61,6 +61,10 @@ app.get('/quality-assurance', (req, res) => {
     res.status(200).sendFile(path.resolve(__dirname, 'src/pages/qualityAssurance.html'));
 });
 
+app.get('/health-services', (req, res) => {
+    res.status(200).sendFile(path.resolve(__dirname, 'src/pages/healthServices.html'));
+});
+
 app.listen(3000, () => {
     console.log('Server is running on port 3000');
 });
