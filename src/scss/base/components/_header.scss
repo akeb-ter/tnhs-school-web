@@ -107,6 +107,41 @@ nav {
             margin-left: auto;
         }
     }
+
+    /* hamburger toggle - hidden on desktop */
+    .nav-toggle {
+        display: none;
+        background: transparent;
+        border: none;
+        color: $white;
+        cursor: pointer;
+        align-items: center;
+        justify-content: center;
+        padding: 6px;
+    }
+
+    .nav-toggle .hamburger {
+        display: block;
+        width: 22px;
+        height: 2px;
+        background: $white;
+        position: relative;
+        transition: background 0.2s ease;
+    }
+
+    .nav-toggle .hamburger::before,
+    .nav-toggle .hamburger::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        width: 22px;
+        height: 2px;
+        background: $white;
+        transition: transform 0.25s ease, top 0.2s ease, opacity 0.2s ease;
+    }
+
+    .nav-toggle .hamburger::before { top: -7px; }
+    .nav-toggle .hamburger::after { top: 7px; }
 }
 
 header {
@@ -125,7 +160,7 @@ header {
     width: 100%;
     z-index: 1000;
     transition: opacity 0.3s ease, transform 0.3s ease;
-    .container {
+        .container {
         display: flex;
         align-items: center;
         .tnhs_logo {
@@ -163,6 +198,12 @@ header {
     }
 }
 
+    @media (max-width: 900px) {
+        header {
+            .csdt_logo { display: none; }
+        }
+    }
+
 //fading animation
 .header-hide {
     opacity: 0;
@@ -172,4 +213,180 @@ header {
 
 .nav-hide {
   transform: translateY(-100%);
+}
+
+/* Responsive mobile behavior */
+@media (max-width: 900px) {
+    nav {
+        height: 40px; /* slightly larger touch area */
+
+        .nav-toggle {
+            display: inline-flex;
+            position: absolute;
+            right: 1rem;
+            top: 6px;
+            z-index: 1004; /* ensure button is always clickable, above menu panel */
+            pointer-events: auto;
+        }
+
+        /* hide inline nav links by default on mobile */
+        .header_navigation_container {
+            display: none;
+            flex-direction: column;
+            position: absolute;
+            top: 40px; /* placed below the nav bar */
+            left: 0;
+            width: 100%;
+            /* user requested: backdrop blue with 50% opacity on the dark blue color */
+            background-color: rgba(11, 28, 45, 0.5);
+            backdrop-filter: blur(8px);
+            padding: 0.5rem 0;
+            gap: 0.25rem;
+            z-index: 1002;
+            /* Ensure the container can grow taller than the nav and scroll if content overflows */
+            height: auto; /* override the desktop height:100% */
+            max-height: calc(100vh - 40px);
+            overflow-y: auto;
+            -webkit-overflow-scrolling: touch;
+            align-items: flex-start; /* align menu items to the left */
+            text-align: left;
+        }
+
+        .header_navigation_container a,
+        .header_navigation_container .nav_item {
+            display: block;
+            padding: 0.6rem 1rem;
+            font-size: $fs-small;
+            width: 100%;
+            text-align: left;
+        }        /* style the nav time entry on mobile */
+        .header_navigation_container #nav_time {
+            margin-left: 0;
+            width: 100%;
+            text-align: left;
+            padding: 0.6rem 1rem;
+        }
+
+        /* Mobile dropdown accordion behavior */
+        .header_navigation_container .nav_item {
+            position: relative;
+            display: block;
+            width: 100%;
+        }
+
+        /* style the dropdown trigger on mobile */
+        .header_navigation_container .nav_item .dropdown_item {
+            width: 100%;
+            color: $white;
+            transition: color 0.2s ease;
+        }
+
+        .header_navigation_container .nav_item .dropdown_item::after {
+            /* keep the margin for spacing on mobile */
+            margin-left: 6px;
+            transition: transform 0.25s ease; /* smooth chevron rotation */
+        }
+
+        /* highlight dropdown trigger and rotate chevron when open */
+        .header_navigation_container .nav_item.open .dropdown_item {
+            color: $gold-main; /* highlight color when submenu is open */
+        }
+
+        .header_navigation_container .nav_item.open .dropdown_item::after {
+            transform: rotate(180deg); /* rotate chevron when open */
+        }
+
+        .header_navigation_container .nav_item .dropdown {
+            /* make dropdowns part of the flow on mobile and hidden by default */
+            position: static;
+            min-width: 100%;
+            padding-inline: 0.5rem;
+            background: transparent;
+            display: none;
+            opacity: 1;
+            visibility: visible;
+            pointer-events: auto;
+            border-radius: 0;
+            flex-direction: column;
+        }
+
+        .header_navigation_container .nav_item .dropdown a {
+            text-align: left;
+            width: 100%;
+            padding: 0.4rem 1rem 0.4rem 2rem; /* indent submenu items */
+        }
+
+        .header_navigation_container .nav_item.open {
+            .dropdown {
+                display: flex;
+            }
+            /* chevron rotation handled by .nav_item.open .dropdown_item::after rule above */
+        }
+
+        /* show the menu when nav has .nav-open */
+        &.nav-open {
+            /* Make the menu panel fullscreen (covers viewport) with strong backdrop and blur */
+            .header_navigation_container {
+                display: flex;
+                position: fixed;
+                inset: 0; /* top:0; right:0; bottom:0; left:0 */
+                padding-top: 40px; /* leave space for the nav bar */
+                width: 100%;
+                height: 100vh;
+                align-items: flex-start; /* align items to the top-left */
+                overflow-y: auto;
+                -webkit-overflow-scrolling: touch;
+                background-color: rgba(11, 28, 45, 0.92);
+                backdrop-filter: blur(18px);
+                -webkit-backdrop-filter: blur(18px);
+                z-index: 1003; /* ensure menu is above the nav */
+            }
+
+            .nav-toggle .hamburger { background: transparent; }
+            .nav-toggle .hamburger::before { transform: rotate(45deg); top: 0; }
+            .nav-toggle .hamburger::after { transform: rotate(-45deg); top: 0; }
+
+            /* animate container appearance */
+            .header_navigation_container {
+                animation: navFadeIn 220ms ease-out forwards;
+            }
+        }
+
+        .header_navigation_container {
+            transition: background-color 200ms ease, backdrop-filter 200ms ease;
+        }
+
+        @keyframes navFadeIn {
+            from { transform: translateY(-6px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+    }
+
+    header {
+        top: 40px; /* push header down slightly on mobile */
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        .tnhs_logo #header_school_logo,
+        .csdt_logo #header_csdt_logo {
+            height: 56px;
+        }
+
+        .header_text_container {
+            margin-left: 0;
+            text-align: center;
+        }
+    }
+}
+
+/* Prevent body scroll when mobile nav/menu is open */
+html.nav-menu-open,
+body.nav-menu-open {
+    overflow: hidden;
+    height: 100%;
 }

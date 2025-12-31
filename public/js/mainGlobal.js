@@ -1,4 +1,5 @@
 import {headerScrollHelper} from "./helper/headerScrollHelper.js";
+import {headerMenuToggle} from "./helper/headerMenuToggle.js";
 
 const loadingOverlay = document.querySelector("#lazy_loading_overlay");
 const body = document.querySelector("body");
@@ -19,6 +20,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     //header/nav hide on scroll
     headerScrollHelper();
+
+    //mobile nav toggle
+    headerMenuToggle();
 
     //nav time update
     function updateTime() {
