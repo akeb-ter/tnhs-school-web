@@ -8,7 +8,7 @@ export function headerScrollHelper() {
 
   const HEADER_LIMIT = 120;
 
-  if (!hero) return; // hard safety
+  // if (!hero) return; // hard safety
 
   window.addEventListener("scroll", () => {
     const currentScrollY = window.scrollY;

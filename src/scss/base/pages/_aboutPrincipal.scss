@@ -1,0 +1,71 @@
+@use '../variables' as *;
+
+body {
+    .about-principal {
+    background-color: $blue-mid;
+    }
+
+    .about-principal__wrap {
+    display: grid;
+    grid-template-columns: 360px 1fr;
+    gap: 4rem;
+    align-items: center;
+    padding-top: 5vh;
+    }
+
+    /* Image */
+    .about-principal__image {
+    img {
+        width: 100%;
+        aspect-ratio: 3 / 4;
+        object-fit: cover;
+        border-radius: 14px;
+        box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
+    }
+    }
+
+    /* Content */
+    .about-principal__content {
+    max-width: 560px;
+    }
+
+    .about-principal__eyebrow {
+    display: inline-block;
+    margin-bottom: 0.75rem;
+    font-size: $fs-very-small;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: $blue-bright;
+    }
+
+    .about-principal__title {
+    font-size: $fs-h2;
+    margin-bottom: 1.5rem;
+    }
+
+    .about-principal__name {
+    font-size: $fs-h3;
+    font-weight: $fw-semibold;
+    margin-bottom: 0.25rem;
+    }
+
+    .about-principal__role {
+    font-size: $fs-small;
+    color: $gray-300;
+    margin-bottom: 1.25rem;
+    }
+
+    .about-principal__desc {
+    font-size: $fs-body;
+    line-height: $lh-relaxed;
+    color: $gray-100;
+    max-width: 520px;
+    margin-bottom: 2rem;
+    }
+
+    /* Actions */
+    .about-principal__actions {
+    display: flex;
+    gap: 1rem;
+    }
+}
