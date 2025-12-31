@@ -1753,5 +1753,76 @@ section {
     grid-template-columns: 1fr;
   }
 }
+/* =========================
+   Registrar Hero
+========================= */
+section {
+  padding-top: 8vh;
+}
+
+.registrar-hero {
+  background-color: #0b1c2d;
+  display: flex;
+  align-items: center;
+}
+
+.registrar-title {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.registrar-subtitle {
+  font-size: 0.875rem;
+  color: #d1d5db;
+  max-width: 540px;
+}
+
+/* =========================
+   Registrar Info
+========================= */
+.registrar-info {
+  background-color: #123a5f;
+}
+
+.registrar-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.registrar-card {
+  background-color: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 14px;
+  padding: 2rem;
+  height: 300px;
+  transition: transform 0.25s ease, border-color 0.25s ease;
+}
+.registrar-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+  color: #ffffff;
+}
+.registrar-card p {
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: #f5f7fa;
+}
+.registrar-card p strong {
+  color: #ffffff;
+  font-weight: 600;
+}
+.registrar-card:hover {
+  border-color: #f4c430;
+}
+
+/* =========================
+   Responsive
+========================= */
+@media (max-width: 800px) {
+  .registrar-grid {
+    grid-template-columns: 1fr;
+  }
+}
 
 /*# sourceMappingURL=main.css.map */
