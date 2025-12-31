@@ -1658,5 +1658,100 @@ section {
     grid-template-columns: 1fr;
   }
 }
+/* =========================
+   Infrastructure Hero
+========================= */
+section {
+  padding-top: 8vh;
+}
+
+.infra-hero {
+  background-color: #0b1c2d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.infra-title {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.infra-subtitle {
+  font-size: 0.875rem;
+  color: #d1d5db;
+  max-width: 540px;
+}
+
+/* =========================
+   Facilities Grid
+========================= */
+.infra-facilities {
+  background-color: #123a5f;
+}
+
+.infra-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.infra-card {
+  background-color: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 14px;
+  padding: 2rem;
+  transition: transform 0.25s ease, border-color 0.25s ease;
+}
+.infra-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+  color: #ffffff;
+}
+.infra-card p {
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: #f5f7fa;
+}
+.infra-card:hover {
+  transform: translateY(-4px);
+  border-color: #2CB1C9;
+}
+
+/* =========================
+   Infrastructure Note
+========================= */
+.infra-note {
+  background-color: #0b1c2d;
+}
+
+.infra-note__wrap {
+  max-width: 720px;
+}
+
+.infra-note h2 {
+  font-size: 2.25rem;
+  margin-bottom: 1rem;
+}
+
+.infra-note p {
+  font-size: 0.875rem;
+  color: #d1d5db;
+  line-height: 2;
+}
+
+/* =========================
+   Responsive
+========================= */
+@media (max-width: 1100px) {
+  .infra-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 700px) {
+  .infra-grid {
+    grid-template-columns: 1fr;
+  }
+}
 
 /*# sourceMappingURL=main.css.map */
