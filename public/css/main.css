@@ -1512,4 +1512,77 @@ body .about-principal__actions {
   gap: 1rem;
 }
 
+body {
+  /* =========================
+  QA Hero
+  ========================= */
+}
+body section {
+  padding-top: 8vh;
+}
+body .qa-hero {
+  background-color: #0b1c2d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body .qa-title {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+body .qa-subtitle {
+  font-size: 0.875rem;
+  color: #d1d5db;
+  max-width: 520px;
+}
+body {
+  /* =========================
+  QA Framework Grid
+  ========================= */
+}
+body .qa-framework {
+  background-color: #123a5f;
+}
+body .qa-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+body .qa-card {
+  background-color: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 14px;
+  padding: 2rem;
+  transition: transform 0.25s ease, border-color 0.25s ease;
+}
+body .qa-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+  color: #ffffff;
+}
+body .qa-card p {
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: #f5f7fa;
+}
+body .qa-card:hover {
+  transform: translateY(-4px);
+  border-color: #00d0ff;
+}
+body {
+  /* =========================
+  Responsive
+  ========================= */
+}
+@media (max-width: 1100px) {
+  body .qa-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 700px) {
+  body .qa-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 /*# sourceMappingURL=main.css.map */
