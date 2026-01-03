@@ -73,8 +73,8 @@ app.get('/about-registrar', (req, res) => {
     res.status(200).sendFile(path.resolve(__dirname, 'src/pages/aboutRegistrar.html'));
 });
 
-app.listen(3000, () => {
-    console.log('Server is running on port 3000');
-});
+// app.listen(3000, () => {
+//     console.log('Server is running on port 3000');
+// });
 
-// export default app;
+export default app;
