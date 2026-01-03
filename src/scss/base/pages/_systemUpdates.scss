@@ -2,7 +2,6 @@
 
 body {
     section.system-updates-hero {
-        padding-top: 30vh;
         background: linear-gradient(
             180deg,
             $blue-mid 0%,
@@ -105,4 +104,10 @@ body {
         }
     }
 
+}
+
+@media (max-width: 768px) {
+    section.system-updates-hero {
+        padding-top: 32vh;
+    }
 }

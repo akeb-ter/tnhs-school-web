@@ -1573,7 +1573,6 @@ body section.regular-details .container .regular-grid .regular-card ul li::befor
   }
 }
 body section.system-updates-hero {
-  padding-top: 30vh;
   background: linear-gradient(180deg, #123a5f 0%, #0b1c2d 100%);
   align-items: center;
   text-align: center;
@@ -1649,6 +1648,11 @@ body section.system-updates .container .updates-list .implemented .update-tag {
   background-color: #B07ACB;
 }
 
+@media (max-width: 768px) {
+  section.system-updates-hero {
+    padding-top: 32vh;
+  }
+}
 body section.academic-hero {
   background: linear-gradient(180deg, #123a5f 0%, #0b1c2d 100%);
   align-items: center;
@@ -2377,7 +2381,6 @@ body section {
   padding-top: 8vh;
 }
 body .qa-hero {
-  padding-top: 30vh;
   background-color: #0b1c2d;
   display: flex;
   align-items: center;
@@ -2437,6 +2440,9 @@ body {
   }
 }
 @media (max-width: 700px) {
+  body .qa-hero {
+    padding-top: 30vh;
+  }
   body .qa-grid {
     grid-template-columns: 1fr;
   }
@@ -2450,7 +2456,6 @@ section {
 }
 
 .health-hero {
-  padding-top: 30vh;
   background-color: #0b1c2d;
   display: flex;
   justify-content: center;
@@ -2512,6 +2517,9 @@ section {
   }
 }
 @media (max-width: 700px) {
+  .health.hero {
+    padding-top: 30vh;
+  }
   .health-grid {
     grid-template-columns: 1fr;
   }
@@ -2524,7 +2532,6 @@ section {
 }
 
 .infra-hero {
-  padding-top: 30vh;
   background-color: #0b1c2d;
   display: flex;
   justify-content: center;
@@ -2608,6 +2615,9 @@ section {
   }
 }
 @media (max-width: 700px) {
+  .infra-hero {
+    padding-top: 30vh;
+  }
   .infra-grid {
     grid-template-columns: 1fr;
   }
