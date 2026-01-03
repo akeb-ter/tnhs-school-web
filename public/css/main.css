@@ -152,16 +152,28 @@ section {
   box-sizing: border-box;
 }
 
-/* =========================
-   MOBILE BREAKPOINT
-   ========================= */
 @media (max-width: 768px) {
+  section {
+    height: fit-content;
+    padding-bottom: 5vh;
+  }
   .container {
-    width: 100%;
-    max-width: 100%;
-    padding-inline: 16px;
+    width: 95%;
   }
 }
+body {
+  min-height: 100vh;
+  overflow-y: auto;
+}
+
+body.nav-menu-open {
+  overflow: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 nav {
   position: fixed;
   top: 0;
@@ -783,59 +795,131 @@ body .about .about_container .about_content_container .about_card a .btn {
   transform: translateX(-50%);
 }
 
+/* =========================
+   HOME PAGE – MOBILE
+   ========================= */
+@media (max-width: 768px) {
+  /* ---------- HERO ---------- */
+  body .hero {
+    min-height: auto;
+    padding: 80px 0 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  body .hero .hero_text_container {
+    text-align: center;
+  }
+  body .hero .hero_text_container .hero_title {
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+  body {
+    /* ---------- IMPACT ---------- */
+  }
+  body .impact .impact_container {
+    display: flex;
+    flex-direction: column;
+  }
+  body .impact .impact_container .impact_text_container {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 24px;
+  }
+  body .impact .impact_container .student_count_bar {
+    justify-content: center;
+  }
+  body .impact .impact_container .academic_programs_container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+  }
+  body .impact .impact_container .total-personnel-text-container {
+    justify-content: center;
+    text-align: center;
+  }
+  body {
+    /* ---------- ABOUT ---------- */
+  }
+  body .about .about_container .about_content_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 24px;
+    /* THIS is the important override */
+  }
+  body .about .about_container .about_content_container .sp-embed-player {
+    width: 100%;
+  }
+  body .about .about_container .about_content_container .about_card {
+    width: 90%;
+    margin: auto;
+    text-align: center;
+  }
+  body .about .about_container .about_content_container .about_card a .btn {
+    left: auto;
+    transform: none;
+    margin-inline: auto;
+    display: block;
+  }
+}
 body section.about-school {
   background: linear-gradient(180deg, #123a5f 0%, #0b1c2d 100%);
   align-items: center;
   padding-top: 8vh;
 }
-body section.about-school .container {
+body section.about-school .about-container {
   padding-top: 10%;
   display: grid;
   grid-template-columns: 1.4fr 1fr;
   gap: 3rem;
   align-items: start;
 }
-body section.about-school .container .about-content {
+body section.about-school .about-container .about-content {
   background: rgba(11, 28, 45, 0.75);
   border-radius: 1rem;
   padding: 2rem;
 }
-body section.about-school .container .about-content .about-image {
+body section.about-school .about-container .about-content .about-image {
   width: 100%;
   height: 280px;
   object-fit: cover;
   border-radius: 0.75rem;
   margin-bottom: 1.5rem;
 }
-body section.about-school .container .about-content .about-text h2 {
+body section.about-school .about-container .about-content .about-text {
+  padding-inline: 0.5rem;
+}
+body section.about-school .about-container .about-content .about-text h2 {
   font-size: 2.25rem;
   font-weight: 700;
   margin-bottom: 1rem;
   color: #ffffff;
 }
-body section.about-school .container .about-content .about-text p {
+body section.about-school .about-container .about-content .about-text p {
   font-size: 0.875rem;
   line-height: 1.8;
   color: #d1d5db;
   margin-bottom: 1rem;
 }
-body section.about-school .container .about-content .about-text p strong {
+body section.about-school .about-container .about-content .about-text p strong {
   color: #ffffff;
   font-weight: 600;
 }
-body section.about-school .container .about-map {
+body section.about-school .about-container .about-map {
   background-color: #ffffff;
   border-radius: 1rem;
   overflow: hidden;
 }
-body section.about-school .container .about-map h3 {
+body section.about-school .about-container .about-map h3 {
   background-color: #f4c430;
   color: #0b1c2d;
   padding: 1rem 1.25rem;
   font-size: 1.5rem;
   font-weight: 600;
 }
-body section.about-school .container .about-map iframe {
+body section.about-school .about-container .about-map iframe {
   width: 100%;
   height: 360px;
   border: none;
@@ -910,6 +994,103 @@ body section.school-profile .container .profile-grid .profile-card ul li strong 
   font-weight: 600;
 }
 
+/* =========================
+   ABOUT SCHOOL – MOBILE
+   ========================= */
+@media (max-width: 768px) {
+  body {
+    /* ---------- ABOUT SCHOOL (TOP SECTION) ---------- */
+  }
+  body .about-school .about-container {
+    display: block;
+  }
+  body .about-school .about-container .about-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+  }
+  body .about-school .about-container .about-content .about-image {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+  }
+  body .about-school .about-container .about-content .about-text {
+    text-align: center;
+  }
+  body .about-school .about-container .about-content .about-text h2 {
+    font-size: 1rem;
+  }
+  body .about-school .about-container .about-map {
+    width: 500px;
+    overflow: hidden;
+    display: block;
+  }
+  body .about-school .about-container .about-map iframe {
+    width: 100%;
+    border: 0;
+  }
+  body {
+    /* ---------- SCHOOL PROFILE ---------- */
+  }
+  body .school-profile {
+    padding: 60px 0;
+  }
+  body .school-profile .container .section-title {
+    text-align: center;
+    font-size: 1.6rem;
+    margin-bottom: 24px;
+  }
+  body .school-profile .container .profile-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    overflow-x: scroll;
+  }
+  body .school-profile .container .profile-grid .profile-card {
+    width: 100%;
+  }
+  body .school-profile .container .profile-grid .profile-card h3 {
+    font-size: 1.1rem;
+  }
+  body .school-profile .container .profile-grid .profile-card ul {
+    padding-left: 18px;
+  }
+}
+@media (max-width: 768px) {
+  body section.about-school .about-container {
+    display: block; /* kills grid */
+    grid-template-columns: none; /* removes phantom column */
+    gap: 0;
+  }
+  body section.about-school .about-container .about-content,
+  body section.about-school .about-container .about-map {
+    width: 95%;
+    padding-inline: 0px;
+    margin: auto;
+    margin-bottom: 32px;
+  }
+  body section.about-school .about-container .about-content .about-text h2 {
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 768px) {
+  body section.school-profile .container .profile-grid {
+    display: flex; /* switch from grid */
+    flex-direction: row;
+    gap: 32px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding-bottom: 16px;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+  body section.school-profile .container .profile-card {
+    flex: 0 0 85%; /* card width on mobile */
+    max-width: 85%;
+    scroll-snap-align: start;
+  }
+}
 body section.vision-mission {
   background: linear-gradient(180deg, #0b1c2d 0%, #08121f 100%);
   align-items: center;

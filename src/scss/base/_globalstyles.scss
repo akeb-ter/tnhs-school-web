@@ -14,6 +14,7 @@ section {
     overflow: hidden;
 }
 
+
 .container {
   width: 80%;
   max-width: 1200px;
@@ -22,13 +23,25 @@ section {
   box-sizing: border-box;
 }
 
-/* =========================
-   MOBILE BREAKPOINT
-   ========================= */
 @media (max-width: 768px) {
-  .container {
-    width: 100%;
-    max-width: 100%;
-    padding-inline: 16px;
+  section {
+    height: fit-content;
+    padding-bottom: 5vh;
   }
+  .container {
+    width: 95%;
+  }
+}
+
+body {
+  min-height: 100vh;
+  overflow-y: auto;
+}
+
+body.nav-menu-open {
+  overflow: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
 }

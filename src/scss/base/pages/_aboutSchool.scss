@@ -9,12 +9,13 @@ body {
         align-items: center;
         padding-top: 8vh;
 
-        .container {
+        .about-container {
             padding-top: 10%;
             display: grid;
             grid-template-columns: 1.4fr 1fr;
             gap: 3rem;
             align-items: start;
+
 
             .about-content {
                 background: $overlay-dark;
@@ -30,6 +31,7 @@ body {
                 }
 
                 .about-text {
+                    padding-inline: 0.5rem;
                     h2 {
                         font-size: $fs-h2;
                         font-weight: $fw-bold;
@@ -55,7 +57,6 @@ body {
                 background-color: $white;
                 border-radius: 1rem;
                 overflow: hidden;
-
                 h3 {
                     background-color: $gold-main;
                     color: $blue-dark;
@@ -154,4 +155,144 @@ body {
             }
         }
     }
+}
+/* =========================
+   ABOUT SCHOOL – MOBILE
+   ========================= */
+@media (max-width: 768px) {
+  body {
+    /* ---------- ABOUT SCHOOL (TOP SECTION) ---------- */
+    .about-school {
+      .about-container {
+        // display: flex;
+        // flex-direction: column;
+        // display: grid;
+        // grid-template-rows: auto auto;
+        // grid-template-columns: 1fr;
+        // align-items: center;
+        // gap: 32px;
+        display: block;
+        .about-content {
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+          width: 100%;
+  
+          .about-image {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+          }
+          .about-text {
+            text-align: center;
+  
+            h2 {
+              font-size: 1rem;
+            }
+          }
+        }
+  
+        .about-map {
+          width: 500px;
+          overflow: hidden;
+          display: block;
+          // z-index: 1;
+          iframe {
+            width: 100%;
+          //   height: 260px;
+          //   max-width: 100%;
+            border: 0;
+          }
+        }
+      }
+
+
+    }
+
+    /* ---------- SCHOOL PROFILE ---------- */
+    .school-profile {
+      padding: 60px 0;
+
+      .container {
+
+        .section-title {
+          text-align: center;
+          font-size: 1.6rem;
+          margin-bottom: 24px;
+        }
+
+        .profile-grid {
+          display: flex;
+          flex-direction: column;
+          gap: 24px;
+          overflow-x: scroll;
+
+          .profile-card {
+            width: 100%;
+
+            h3 {
+              font-size: 1.1rem;
+            }
+
+            ul {
+              padding-left: 18px;
+            }
+          }
+        }
+      }
+    }
+
+  }
+}
+
+@media (max-width: 768px) {
+  body section.about-school .about-container {
+    display: block;              /* kills grid */
+    grid-template-columns: none; /* removes phantom column */
+    gap: 0;
+  }
+
+  body section.about-school .about-container .about-content,
+  body section.about-school .about-container .about-map {
+    width: 95%;
+    padding-inline: 0px;
+    margin: auto;
+    margin-bottom: 32px;
+  }
+
+  body section.about-school .about-container .about-content .about-text {
+    h2 {
+        font-size: $fs-h3;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+
+    section.school-profile {
+
+      .container {
+
+        .profile-grid {
+          display: flex;                 /* switch from grid */
+          flex-direction: row;
+          gap: 32px;
+          overflow-x: auto;
+          overflow-y: hidden;
+          padding-bottom: 16px;
+
+          scroll-snap-type: x mandatory;
+          -webkit-overflow-scrolling: touch;
+        }
+
+        .profile-card {
+          flex: 0 0 85%;                 /* card width on mobile */
+          max-width: 85%;
+          scroll-snap-align: start;
+        }
+      }
+    }
+
+  }
 }
