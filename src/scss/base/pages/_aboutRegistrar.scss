@@ -75,6 +75,9 @@ section {
    Responsive
 ========================= */
 @media (max-width: 800px) {
+  .registrar-hero {
+    padding-top: 30vh;
+  }
   .registrar-grid {
     grid-template-columns: 1fr;
   }

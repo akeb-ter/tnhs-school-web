@@ -238,6 +238,9 @@ body {
     }
 
     @media (max-width: 900px) {
+        section.publication-hero {
+            padding-top: 32vh;
+        }
         section.publication-news {
             .container {
                 .news-grid {

@@ -88,3 +88,87 @@ body {
         }
     }
 }
+
+/* =========================
+   REGULAR CURRICULUM – MOBILE BREAKPOINT
+   ========================= */
+@media (max-width: 900px) {
+  body {
+
+    /* ---------- HERO (FIRST SECTION) ---------- */
+    section.regular-hero {
+      height: auto;
+
+      .container {
+        padding-top: 30vh; /* REQUIRED OFFSET */
+
+        .regular-hero-content {
+          text-align: center;
+
+          h1 {
+            font-size: $fs-h2;
+            line-height: 1.2;
+          }
+
+          p {
+            font-size: $fs-body;
+            line-height: $lh-loose;
+          }
+        }
+      }
+    }
+
+    /* ---------- DETAILS / CARDS ---------- */
+    section.regular-details {
+      height: auto;
+
+      .container {
+
+        .regular-grid {
+          display: grid;
+          grid-template-columns: 1fr; /* STEP / SPA style */
+          gap: 2rem;
+        }
+
+        .regular-card {
+          background: $overlay-dark;
+          border-radius: 1rem;
+          padding: 2rem;
+
+          h3 {
+            font-size: $fs-h3;
+            margin-bottom: 1rem;
+            color: $gold-main;
+          }
+
+          p {
+            font-size: $fs-body;
+            line-height: $lh-loose;
+            color: $gray-300;
+          }
+
+          ul {
+            list-style: none;
+            padding-left: 0;
+
+            li {
+              font-size: $fs-body;
+              color: $gray-300;
+              margin-bottom: 0.6rem;
+              padding-left: 1rem;
+              position: relative;
+
+              &::before {
+                content: "•";
+                position: absolute;
+                left: 0;
+                color: $accent-blue;
+              }
+            }
+          }
+        }
+      }
+    }
+
+  }
+}

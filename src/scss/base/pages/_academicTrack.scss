@@ -141,11 +141,149 @@ body {
         height: auto;
     }
 
-    section.strand-details {
-        .container {
-            .strand-grid {
-                grid-template-columns: 1fr;
-            }
+   @media (max-width: 900px) {
+  body section.strand-details .container .strand-grid {
+    display: flex !important;
+    flex-direction: row !important;
+
+    grid-template-columns: none !important;
+    grid-auto-flow: unset !important;
+
+    gap: 32px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding-bottom: 16px;
+
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  body section.strand-details .container .strand-card {
+    flex: 0 0 85vw;
+    max-width: 85vw;
+    scroll-snap-align: start;
+  }
+}
+
+
+}
+
+/* =========================
+   ACADEMIC TRACK – MOBILE LAYOUT
+   ========================= */
+@media (max-width: 900px) {
+  body {
+
+    /* ---------- PAGE HERO ---------- */
+    section.academic-hero {
+      height: auto;
+
+      .container {
+        padding-top: 30vh; /* REQUIRED OFFSET */
+
+        h1 {
+          font-size: $fs-h2;
+          text-align: center;
         }
+
+        p {
+          font-size: $fs-body;
+          line-height: $lh-loose;
+          text-align: center;
+        }
+      }
     }
+
+    /* ---------- STRAND HEROES ---------- */
+    section.strand-hero {
+      height: auto;
+
+      .container {
+        padding-top: 20vh; /* lighter than main hero */
+        padding-bottom: 64px;
+        text-align: center;
+      }
+
+      .strand-content {
+        align-items: center;
+        text-align: center;
+
+        .program-logo {
+        //   width: 120px;
+          margin-bottom: 1.25rem;
+        }
+
+        h2 {
+          font-size: $fs-h3;
+          line-height: 1.3;
+        }
+
+        p {
+          font-size: $fs-body;
+          line-height: $lh-loose;
+        }
+      }
+    }
+
+    /* ---------- STRAND DETAILS / CARDS ---------- */
+/* ---------- STRAND DETAILS / CARDS (HORIZONTAL SCROLL) ---------- */
+/* ---------- STRAND DETAILS / CARDS (ONE COLUMN) ---------- */
+section.strand-details {
+  height: auto;
+
+  .container {
+    padding-inline: 16px; /* restore normal mobile padding */
+
+    .strand-grid {
+      display: flex !important;          /* kill grid */
+      flex-direction: column !important; /* ONE COLUMN */
+      gap: 24px !important;
+      overflow: visible !important;      /* no scroll, no clipping */
+    }
+
+    .strand-card {
+      width: 80% !important;
+      background: $overlay-dark;
+      border-radius: 1rem;
+      padding-inline: 16px;   /* tight mobile padding */
+      padding-block: 24px;
+
+      h3 {
+        font-size: $fs-h3;
+        margin-bottom: 1rem;
+        color: $gold-main;
+      }
+
+      p {
+        font-size: $fs-body;
+        line-height: $lh-loose;
+        color: $gray-300;
+      }
+
+      ul {
+        list-style: none;
+        padding-left: 0;
+
+        li {
+          font-size: $fs-body;
+          color: $gray-300;
+          margin-bottom: 0.6rem;
+          padding-left: 1rem;
+          position: relative;
+
+          &::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: $accent-blue;
+          }
+        }
+      }
+    }
+  }
+
+
+
+  }
+}
 }

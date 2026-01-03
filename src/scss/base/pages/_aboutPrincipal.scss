@@ -69,3 +69,58 @@ body {
     gap: 1rem;
     }
 }
+
+/* =========================
+   ABOUT PRINCIPAL – MOBILE
+   ========================= */
+@media (max-width: 768px) {
+  body {
+
+    section.about-principal {
+
+      .about-principal__wrap {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        align-items: center;
+        text-align: center;
+      }
+
+      .about-principal__image {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+
+        img {
+          width: 100%;
+          max-width: 280px;
+          height: auto;
+          border-radius: 16px;
+        }
+      }
+
+      .about-principal__content {
+        width: 100%;
+
+        .about-principal__title {
+          font-size: 1.6rem;
+        }
+
+        .about-principal__name {
+          font-size: 1.25rem;
+        }
+
+        .about-principal__role {
+          font-size: 0.95rem;
+        }
+
+        .about-principal__desc {
+          font-size: 0.95rem;
+          line-height: 1.6;
+        }
+      }
+ 
+    }
+
+  }
+}

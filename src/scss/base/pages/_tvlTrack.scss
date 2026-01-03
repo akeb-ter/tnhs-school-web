@@ -135,3 +135,118 @@ body {
     }
 
 }
+
+/* =========================
+   TVL TRACK – MOBILE LAYOUT
+   ========================= */
+@media (max-width: 900px) {
+  body {
+
+    /* ---------- PAGE HERO ---------- */
+    section.tvl-hero {
+      height: auto;
+
+      .container {
+        padding-top: 30vh; /* REQUIRED OFFSET */
+
+        h1 {
+          font-size: $fs-h2;
+          text-align: center;
+        }
+
+        p {
+          font-size: $fs-body;
+          line-height: $lh-loose;
+          text-align: center;
+        }
+      }
+    }
+
+    /* ---------- STRAND HERO ---------- */
+    section.strand-hero {
+      height: auto;
+
+      .container {
+        padding-top: 20vh;
+        padding-bottom: 64px;
+        text-align: center;
+      }
+
+      .strand-content {
+        text-align: center;
+
+        .program-logo {
+        //   width: 120px;
+          margin-bottom: 1.25rem;
+        }
+
+        h2 {
+          font-size: $fs-h3;
+          line-height: 1.3;
+        }
+
+        p {
+          font-size: $fs-body;
+          line-height: $lh-loose;
+        }
+      }
+    }
+
+    /* ---------- STRAND DETAILS (ONE COLUMN) ---------- */
+    section.strand-details {
+      height: auto;
+
+      .container {
+        padding-inline: 16px;
+
+        .strand-grid {
+          display: flex;
+          flex-direction: column;
+          gap: 24px;
+          overflow: visible;
+        }
+
+        .strand-card {
+          width: 100%;
+          background: $overlay-dark;
+          border-radius: 1rem;
+          padding-inline: 16px;
+          padding-block: 24px;
+
+          h3 {
+            font-size: $fs-h3;
+            margin-bottom: 1rem;
+            color: $gold-main;
+          }
+
+          p {
+            font-size: $fs-body;
+            line-height: $lh-loose;
+            color: $gray-300;
+          }
+
+          ul {
+            list-style: none;
+            padding-left: 0;
+
+            li {
+              font-size: $fs-body;
+              color: $gray-300;
+              margin-bottom: 0.6rem;
+              padding-left: 1rem;
+              position: relative;
+
+              &::before {
+                content: "•";
+                position: absolute;
+                left: 0;
+                color: $accent-blue;
+              }
+            }
+          }
+        }
+      }
+    }
+
+  }
+}

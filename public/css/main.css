@@ -1136,6 +1136,43 @@ body section.vision-mission .container .vm-grid .mission {
   border-left: 4px solid #5CC9A7;
 }
 
+/* =========================
+   VISION & MISSION – MOBILE LAYOUT
+   ========================= */
+@media (max-width: 768px) {
+  body section.vision-mission {
+    padding-top: 30vh; /* ← part of layout, not a hack */
+    padding-bottom: 64px;
+  }
+  body section.vision-mission .vision-mission_container {
+    padding-inline: 0px;
+  }
+  body section.vision-mission .container .section-title {
+    text-align: center;
+    font-size: 1.6rem;
+    margin-bottom: 24px;
+  }
+  body section.vision-mission .container .vm-grid {
+    display: flex; /* kill desktop grid */
+    flex-direction: column;
+    justify-content: center;
+    gap: 24px;
+  }
+  body section.vision-mission .container .vm-card {
+    width: 85%;
+  }
+  body section.vision-mission .container .vm-card h3 {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+  body section.vision-mission .container .vm-card p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+  body section.vision-mission .container .vm-card ul {
+    padding-left: 18px;
+  }
+}
 body section.step-hero {
   position: relative;
   align-items: center;
@@ -1228,6 +1265,9 @@ body section.step-details .container .step-grid .step-card ul li::before {
   body section.step-hero,
   body section.step-details {
     height: auto;
+  }
+  body section.step-hero .container {
+    padding-top: 30vh;
   }
   body section.step-hero .container .step-hero-content .step-logo {
     width: 120px;
@@ -1330,6 +1370,78 @@ body section.spa-details .container .spa-grid .spa-card ul li::before {
   color: #B07ACB;
 }
 
+/* =========================
+   SPA PROGRAM – MOBILE BREAKPOINT (FINAL)
+   ========================= */
+@media (max-width: 900px) {
+  body {
+    /* ---------- HERO ---------- */
+  }
+  body section.spa-hero {
+    height: auto;
+  }
+  body section.spa-hero .container {
+    padding-top: 30vh; /* REQUIRED OFFSET */
+  }
+  body section.spa-hero .container .spa-hero-content {
+    text-align: center;
+    align-items: center;
+  }
+  body section.spa-hero .container .spa-hero-content .program-logo {
+    margin-bottom: 1.5rem;
+  }
+  body section.spa-hero .container .spa-hero-content h1 {
+    font-size: 2.25rem;
+    line-height: 1.2;
+  }
+  body section.spa-hero .container .spa-hero-content p {
+    font-size: 0.875rem;
+    line-height: 1.8;
+  }
+  body {
+    /* ---------- DETAILS / CARDS ---------- */
+  }
+  body section.spa-details {
+    height: auto;
+  }
+  body section.spa-details .container .spa-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* STEP-style mobile */
+    gap: 2rem;
+  }
+  body section.spa-details .container .spa-card {
+    background: rgba(11, 28, 45, 0.75);
+    border-radius: 1rem;
+    padding: 2rem;
+  }
+  body section.spa-details .container .spa-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #f4c430;
+  }
+  body section.spa-details .container .spa-card p {
+    font-size: 0.875rem;
+    line-height: 1.8;
+    color: #d1d5db;
+  }
+  body section.spa-details .container .spa-card ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  body section.spa-details .container .spa-card ul li {
+    font-size: 0.875rem;
+    color: #d1d5db;
+    margin-bottom: 0.6rem;
+    padding-left: 1rem;
+    position: relative;
+  }
+  body section.spa-details .container .spa-card ul li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #2CB1C9;
+  }
+}
 body section.regular-hero {
   background: linear-gradient(180deg, #123a5f 0%, #0b1c2d 100%);
   align-items: center;
@@ -1392,7 +1504,76 @@ body section.regular-details .container .regular-grid .regular-card ul li::befor
   color: #5CC9A7;
 }
 
+/* =========================
+   REGULAR CURRICULUM – MOBILE BREAKPOINT
+   ========================= */
+@media (max-width: 900px) {
+  body {
+    /* ---------- HERO (FIRST SECTION) ---------- */
+  }
+  body section.regular-hero {
+    height: auto;
+  }
+  body section.regular-hero .container {
+    padding-top: 30vh; /* REQUIRED OFFSET */
+  }
+  body section.regular-hero .container .regular-hero-content {
+    text-align: center;
+  }
+  body section.regular-hero .container .regular-hero-content h1 {
+    font-size: 2.25rem;
+    line-height: 1.2;
+  }
+  body section.regular-hero .container .regular-hero-content p {
+    font-size: 0.875rem;
+    line-height: 1.8;
+  }
+  body {
+    /* ---------- DETAILS / CARDS ---------- */
+  }
+  body section.regular-details {
+    height: auto;
+  }
+  body section.regular-details .container .regular-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* STEP / SPA style */
+    gap: 2rem;
+  }
+  body section.regular-details .container .regular-card {
+    background: rgba(11, 28, 45, 0.75);
+    border-radius: 1rem;
+    padding: 2rem;
+  }
+  body section.regular-details .container .regular-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #f4c430;
+  }
+  body section.regular-details .container .regular-card p {
+    font-size: 0.875rem;
+    line-height: 1.8;
+    color: #d1d5db;
+  }
+  body section.regular-details .container .regular-card ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  body section.regular-details .container .regular-card ul li {
+    font-size: 0.875rem;
+    color: #d1d5db;
+    margin-bottom: 0.6rem;
+    padding-left: 1rem;
+    position: relative;
+  }
+  body section.regular-details .container .regular-card ul li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #2CB1C9;
+  }
+}
 body section.system-updates-hero {
+  padding-top: 30vh;
   background: linear-gradient(180deg, #123a5f 0%, #0b1c2d 100%);
   align-items: center;
   text-align: center;
@@ -1571,8 +1752,124 @@ body section.strand-details .container .strand-grid .strand-card ul li::before {
   section.strand-details {
     height: auto;
   }
-  section.strand-details .container .strand-grid {
-    grid-template-columns: 1fr;
+}
+@media (max-width: 900px) and (max-width: 900px) {
+  body section.strand-details .container .strand-grid {
+    display: flex !important;
+    flex-direction: row !important;
+    grid-template-columns: none !important;
+    grid-auto-flow: unset !important;
+    gap: 32px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding-bottom: 16px;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+  body section.strand-details .container .strand-card {
+    flex: 0 0 85vw;
+    max-width: 85vw;
+    scroll-snap-align: start;
+  }
+}
+/* =========================
+   ACADEMIC TRACK – MOBILE LAYOUT
+   ========================= */
+@media (max-width: 900px) {
+  body {
+    /* ---------- PAGE HERO ---------- */
+  }
+  body section.academic-hero {
+    height: auto;
+  }
+  body section.academic-hero .container {
+    padding-top: 30vh; /* REQUIRED OFFSET */
+  }
+  body section.academic-hero .container h1 {
+    font-size: 2.25rem;
+    text-align: center;
+  }
+  body section.academic-hero .container p {
+    font-size: 0.875rem;
+    line-height: 1.8;
+    text-align: center;
+  }
+  body {
+    /* ---------- STRAND HEROES ---------- */
+  }
+  body section.strand-hero {
+    height: auto;
+  }
+  body section.strand-hero .container {
+    padding-top: 20vh; /* lighter than main hero */
+    padding-bottom: 64px;
+    text-align: center;
+  }
+  body section.strand-hero .strand-content {
+    align-items: center;
+    text-align: center;
+  }
+  body section.strand-hero .strand-content .program-logo {
+    margin-bottom: 1.25rem;
+  }
+  body section.strand-hero .strand-content h2 {
+    font-size: 1.5rem;
+    line-height: 1.3;
+  }
+  body section.strand-hero .strand-content p {
+    font-size: 0.875rem;
+    line-height: 1.8;
+  }
+  body {
+    /* ---------- STRAND DETAILS / CARDS ---------- */
+    /* ---------- STRAND DETAILS / CARDS (HORIZONTAL SCROLL) ---------- */
+    /* ---------- STRAND DETAILS / CARDS (ONE COLUMN) ---------- */
+  }
+  body section.strand-details {
+    height: auto;
+  }
+  body section.strand-details .container {
+    padding-inline: 16px; /* restore normal mobile padding */
+  }
+  body section.strand-details .container .strand-grid {
+    display: flex !important; /* kill grid */
+    flex-direction: column !important; /* ONE COLUMN */
+    gap: 24px !important;
+    overflow: visible !important; /* no scroll, no clipping */
+  }
+  body section.strand-details .container .strand-card {
+    width: 80% !important;
+    background: rgba(11, 28, 45, 0.75);
+    border-radius: 1rem;
+    padding-inline: 16px; /* tight mobile padding */
+    padding-block: 24px;
+  }
+  body section.strand-details .container .strand-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #f4c430;
+  }
+  body section.strand-details .container .strand-card p {
+    font-size: 0.875rem;
+    line-height: 1.8;
+    color: #d1d5db;
+  }
+  body section.strand-details .container .strand-card ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  body section.strand-details .container .strand-card ul li {
+    font-size: 0.875rem;
+    color: #d1d5db;
+    margin-bottom: 0.6rem;
+    padding-left: 1rem;
+    position: relative;
+  }
+  body section.strand-details .container .strand-card ul li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #2CB1C9;
   }
 }
 body section.tvl-hero {
@@ -1673,6 +1970,103 @@ body section.strand-details .container .strand-grid .strand-card ul li::before {
   color: #5CC9A7;
 }
 
+/* =========================
+   TVL TRACK – MOBILE LAYOUT
+   ========================= */
+@media (max-width: 900px) {
+  body {
+    /* ---------- PAGE HERO ---------- */
+  }
+  body section.tvl-hero {
+    height: auto;
+  }
+  body section.tvl-hero .container {
+    padding-top: 30vh; /* REQUIRED OFFSET */
+  }
+  body section.tvl-hero .container h1 {
+    font-size: 2.25rem;
+    text-align: center;
+  }
+  body section.tvl-hero .container p {
+    font-size: 0.875rem;
+    line-height: 1.8;
+    text-align: center;
+  }
+  body {
+    /* ---------- STRAND HERO ---------- */
+  }
+  body section.strand-hero {
+    height: auto;
+  }
+  body section.strand-hero .container {
+    padding-top: 20vh;
+    padding-bottom: 64px;
+    text-align: center;
+  }
+  body section.strand-hero .strand-content {
+    text-align: center;
+  }
+  body section.strand-hero .strand-content .program-logo {
+    margin-bottom: 1.25rem;
+  }
+  body section.strand-hero .strand-content h2 {
+    font-size: 1.5rem;
+    line-height: 1.3;
+  }
+  body section.strand-hero .strand-content p {
+    font-size: 0.875rem;
+    line-height: 1.8;
+  }
+  body {
+    /* ---------- STRAND DETAILS (ONE COLUMN) ---------- */
+  }
+  body section.strand-details {
+    height: auto;
+  }
+  body section.strand-details .container {
+    padding-inline: 16px;
+  }
+  body section.strand-details .container .strand-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    overflow: visible;
+  }
+  body section.strand-details .container .strand-card {
+    width: 100%;
+    background: rgba(11, 28, 45, 0.75);
+    border-radius: 1rem;
+    padding-inline: 16px;
+    padding-block: 24px;
+  }
+  body section.strand-details .container .strand-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #f4c430;
+  }
+  body section.strand-details .container .strand-card p {
+    font-size: 0.875rem;
+    line-height: 1.8;
+    color: #d1d5db;
+  }
+  body section.strand-details .container .strand-card ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  body section.strand-details .container .strand-card ul li {
+    font-size: 0.875rem;
+    color: #d1d5db;
+    margin-bottom: 0.6rem;
+    padding-left: 1rem;
+    position: relative;
+  }
+  body section.strand-details .container .strand-card ul li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #2CB1C9;
+  }
+}
 body section.publication-hero {
   position: relative;
   align-items: center;
@@ -1864,6 +2258,9 @@ body .news-modal .news-modal-content .news-modal-text p {
   color: #d1d5db;
 }
 @media (max-width: 900px) {
+  body section.publication-hero {
+    padding-top: 32vh;
+  }
   body section.publication-news .container .news-grid {
     grid-template-columns: 1fr;
   }
@@ -1932,6 +2329,45 @@ body .about-principal__actions {
   gap: 1rem;
 }
 
+/* =========================
+   ABOUT PRINCIPAL – MOBILE
+   ========================= */
+@media (max-width: 768px) {
+  body section.about-principal .about-principal__wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: center;
+    text-align: center;
+  }
+  body section.about-principal .about-principal__image {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  body section.about-principal .about-principal__image img {
+    width: 100%;
+    max-width: 280px;
+    height: auto;
+    border-radius: 16px;
+  }
+  body section.about-principal .about-principal__content {
+    width: 100%;
+  }
+  body section.about-principal .about-principal__content .about-principal__title {
+    font-size: 1.6rem;
+  }
+  body section.about-principal .about-principal__content .about-principal__name {
+    font-size: 1.25rem;
+  }
+  body section.about-principal .about-principal__content .about-principal__role {
+    font-size: 0.95rem;
+  }
+  body section.about-principal .about-principal__content .about-principal__desc {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+}
 body {
   /* =========================
   QA Hero
@@ -1941,6 +2377,7 @@ body section {
   padding-top: 8vh;
 }
 body .qa-hero {
+  padding-top: 30vh;
   background-color: #0b1c2d;
   display: flex;
   align-items: center;
@@ -2013,6 +2450,7 @@ section {
 }
 
 .health-hero {
+  padding-top: 30vh;
   background-color: #0b1c2d;
   display: flex;
   justify-content: center;
@@ -2086,6 +2524,7 @@ section {
 }
 
 .infra-hero {
+  padding-top: 30vh;
   background-color: #0b1c2d;
   display: flex;
   justify-content: center;
@@ -2240,6 +2679,9 @@ section {
    Responsive
 ========================= */
 @media (max-width: 800px) {
+  .registrar-hero {
+    padding-top: 30vh;
+  }
   .registrar-grid {
     grid-template-columns: 1fr;
   }
