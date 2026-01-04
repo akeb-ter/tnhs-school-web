@@ -26,7 +26,7 @@ app.get('/about-vision-mission', (req, res) => {
 });
 
 app.get('/STE-program', (req, res) => {
-    res.status(200).sendFile(path.resolve(__dirname, 'src/pages/STEprogram.html'));
+    res.status(200).sendFile(path.resolve(__dirname, 'src/pages/steProgram.html'));
 });
 
 app.get('/SPA-program', (req, res) => {
